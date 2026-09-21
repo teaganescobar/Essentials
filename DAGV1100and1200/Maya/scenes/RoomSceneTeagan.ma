@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: RoomSceneTeagan.ma
-//Last modified: Sun, Sep 20, 2026 08:56:38 PM
+//Last modified: Sun, Sep 20, 2026 09:02:41 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Plant" -rfn "PlantRN" -op "v=0;" -typ "mayaAscii" "/Users/teaganescobar/Gitrepos/Essentials/DAGV1100and1200/Maya//scenes/Plant.ma";
 file -rdi 1 -ns "Plant1" -rfn "PlantRN1" -op "v=0;" -typ "mayaAscii" "/Users/teaganescobar/Gitrepos/Essentials/DAGV1100and1200/Maya//scenes/Plant.ma";
@@ -17,19 +17,19 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202606171832-bee0ff2c7e";
 fileInfo "osv" "Mac OS X 20.6.2";
-fileInfo "UUID" "88679E9F-9A40-D42E-3284-36BB5D2CC233";
+fileInfo "UUID" "F461DAE7-A742-38F3-F5B9-F5A2960F2EC8";
 createNode transform -s -n "persp";
 	rename -uid "DA5E94C3-F146-89A2-ADA8-F2B2FC642D96";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 65.884674676074269 14.865634198888671 80.447410324406874 ;
-	setAttr ".r" -type "double3" -2.9999999999983116 39.599999999994779 5.1597988601812753e-16 ;
+	setAttr ".t" -type "double3" 18.792330016600268 19.589974526414473 13.335301633378057 ;
+	setAttr ".r" -type "double3" -35.999999999998572 51.999999999994849 -5.1660771526767607e-15 ;
 	setAttr ".rp" -type "double3" -8.8817841970012523e-16 0 3.5527136788005009e-15 ;
 	setAttr ".rpt" -type "double3" 4.5445919081754267e-15 3.0281267107760288e-16 -2.8996332563057229e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "70C7BA89-6942-DCA9-6455-B39590E6742C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 111.31474023107751;
+	setAttr ".coi" 30.737961315849891;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3154,7 +3154,7 @@ createNode transform -n "Plant:revolvedSurface1Shape";
 	rename -uid "F5BE741F-644C-FF00-A4A9-C989B1955D90";
 	setAttr ".t" -type "double3" -7.9999999999999991 0 -8.9837853908538818 ;
 	setAttr ".r" -type "double3" 0 -39.946570447111263 0 ;
-	setAttr ".s" -type "double3" 0.46833063842352762 0.46833063842352762 0.46833063842352762 ;
+	setAttr ".s" -type "double3" 0.42192828628543166 0.42192828628543166 0.42192828628543166 ;
 	setAttr ".rp" -type "double3" 0 0 -0.016214609146118164 ;
 	setAttr ".rpt" -type "double3" 0 0 -5.2041704279304213e-18 ;
 	setAttr ".sp" -type "double3" 0 0 -0.016214609146118164 ;
@@ -3170,7 +3170,7 @@ createNode mesh -n "Plant:revolvedSurface1ShapeShape" -p "|Plant:revolvedSurface
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "PlantRNfosterParent1";
-	rename -uid "439BE802-8F4A-957D-FF92-8A9BA44C8770";
+	rename -uid "29EAFFDF-9A46-4787-E3DC-9FAB3F206D33";
 createNode transform -n "Plant:transform1" -p "PlantRNfosterParent1";
 	rename -uid "50A3D5F3-E841-C4F5-1C32-668C2512A593";
 	setAttr ".v" no;
@@ -3747,7 +3747,7 @@ createNode transform -n "Plant:transform12" -p "PlantRNfosterParent1";
 	rename -uid "EB2FA76C-6B4E-A87B-160F-0B89A1299BBA";
 	setAttr ".v" no;
 createNode fosterParent -n "PlantRN1fosterParent1";
-	rename -uid "A7707959-6B4A-A175-E8B7-A7A47E4EBE5C";
+	rename -uid "BACEA458-524E-97B7-91A2-518279BB5B5C";
 createNode transform -n "Plant:transform14" -p "PlantRN1fosterParent1";
 	rename -uid "0220ED08-1441-4340-7BA3-40A5EA166412";
 	setAttr ".v" no;
