@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Plant.ma
-//Last modified: Sun, Sep 20, 2026 08:55:11 PM
+//Last modified: Sun, Sep 20, 2026 09:42:50 PM
 //Codeset: UTF-8
 requires maya "2027";
 requires -nodeType "UsdDefaultSettings" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.37.0";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202606171832-bee0ff2c7e";
 fileInfo "osv" "Mac OS X 20.6.2";
-fileInfo "UUID" "F0C92B33-F24A-2FEF-9EE4-ED96BC31AD8E";
+fileInfo "UUID" "83CF0F39-DA47-7D89-9C28-35B52A179C34";
 createNode transform -s -n "persp";
 	rename -uid "31A51788-834E-017B-EBEC-C09DC17AC56C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 48.371013953666072 25.144487411994149 1.3798319341863632 ;
-	setAttr ".r" -type "double3" -16.53835272976 1165.799999999798 2.1713769631495328e-14 ;
+	setAttr ".t" -type "double3" 19.891950007632197 13.739442562755226 17.754704634391025 ;
+	setAttr ".r" -type "double3" -17.738352729708279 1127.3999999997704 2.3494368421298747e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A053F030-694D-394E-47B3-889F417817EC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 49.846276017785812;
+	setAttr ".coi" 26.193522685910125;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1534,20 +1534,20 @@ createNode mesh -n "pasted__pasted__loftedSurfaceShape1" -p "pasted__pasted__lof
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "0D6553D8-E740-DB51-86DD-98A4319FF474";
+	rename -uid "E090B9BE-F54B-C8E3-D5B3-DB9F4FC25656";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "86CE8C6E-894B-9357-A2D9-C195285190B3";
+	rename -uid "5F5E7D42-E342-975D-23D3-4696A9159CB7";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F162E712-744A-4763-F061-51B0B8F44FA3";
+	rename -uid "3B9B5933-EF40-8268-55CA-53B5C49A6CF8";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "749F80CA-5F48-DEC5-077B-8DAA0CF87487";
+	rename -uid "2F41C0F4-7442-410E-2CCC-1D91926A48CD";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "CC37A061-EA4C-44AE-3F4D-D1A3BF7769AC";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "834E5348-1D46-87AF-9177-D597DD23905C";
+	rename -uid "6AB7FB53-964B-11FE-1AA7-99904178C1B7";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "45069E8F-304C-0A05-9FF3-0CADD3021264";
 	setAttr ".g" yes;
