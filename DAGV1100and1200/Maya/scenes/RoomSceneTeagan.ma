@@ -1,31 +1,35 @@
 //Maya ASCII 2027 scene
 //Name: RoomSceneTeagan.ma
-//Last modified: Fri, Sep 04, 2026 09:54:59 PM
+//Last modified: Sun, Sep 20, 2026 08:56:38 PM
 //Codeset: UTF-8
+file -rdi 1 -ns "Plant" -rfn "PlantRN" -op "v=0;" -typ "mayaAscii" "/Users/teaganescobar/Gitrepos/Essentials/DAGV1100and1200/Maya//scenes/Plant.ma";
+file -rdi 1 -ns "Plant1" -rfn "PlantRN1" -op "v=0;" -typ "mayaAscii" "/Users/teaganescobar/Gitrepos/Essentials/DAGV1100and1200/Maya//scenes/Plant.ma";
+file -r -ns "Plant" -dr 1 -rfn "PlantRN" -op "v=0;" -typ "mayaAscii" "/Users/teaganescobar/Gitrepos/Essentials/DAGV1100and1200/Maya//scenes/Plant.ma";
+file -r -ns "Plant1" -dr 1 -rfn "PlantRN1" -op "v=0;" -typ "mayaAscii" "/Users/teaganescobar/Gitrepos/Essentials/DAGV1100and1200/Maya//scenes/Plant.ma";
 requires maya "2027";
 requires -nodeType "UsdDefaultSettings" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.37.0";
+requires -nodeType "polyBoolean" "polyBoolean" "1.1";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.6.2";
-requires -nodeType "polyBoolean" "polyBoolean" "1.1";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202606171832-bee0ff2c7e";
 fileInfo "osv" "Mac OS X 20.6.2";
-fileInfo "UUID" "0A6FCBDB-AA4F-85C3-1410-2FAD2183B8F1";
+fileInfo "UUID" "88679E9F-9A40-D42E-3284-36BB5D2CC233";
 createNode transform -s -n "persp";
 	rename -uid "DA5E94C3-F146-89A2-ADA8-F2B2FC642D96";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 17.323001702071881 8.5009213320432941 -4.5622233954193909 ;
-	setAttr ".r" -type "double3" -16.200000000003318 111.99999999999957 0 ;
+	setAttr ".t" -type "double3" 65.884674676074269 14.865634198888671 80.447410324406874 ;
+	setAttr ".r" -type "double3" -2.9999999999983116 39.599999999994779 5.1597988601812753e-16 ;
 	setAttr ".rp" -type "double3" -8.8817841970012523e-16 0 3.5527136788005009e-15 ;
 	setAttr ".rpt" -type "double3" 4.5445919081754267e-15 3.0281267107760288e-16 -2.8996332563057229e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "70C7BA89-6942-DCA9-6455-B39590E6742C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 14.041793502120516;
+	setAttr ".coi" 111.31474023107751;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3121,22 +3125,690 @@ createNode mesh -n "polySurfaceShape1" -p "polySurface1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "group1";
+	rename -uid "8C677961-234E-BD8E-1D66-2391518D85C5";
+createNode transform -n "Plant:revolvedSurface1" -p "group1";
+	rename -uid "8B40ADBD-4C47-187E-511F-079616798663";
+	setAttr ".rp" -type "double3" 0 4.9449178408831358 0 ;
+	setAttr ".sp" -type "double3" 0 4.9449178408831358 0 ;
+	setAttr ".it" no;
+createNode transform -n "Plant:transform13" -p "|group1|Plant:revolvedSurface1";
+	rename -uid "0AEB3552-3542-BAF0-2381-BDAFEB12AA0A";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform28" -p "|group1|Plant:revolvedSurface1";
+	rename -uid "69DF8D9E-A448-6C52-3643-FB992DC20626";
+	setAttr ".v" no;
+createNode mesh -n "Plant:revolvedSurface1Shape" -p "Plant:transform28";
+	rename -uid "E3AD197B-C74C-838D-0577-3087DF4D4D33";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "Plant:revolvedSurface1Shape";
+	rename -uid "F5BE741F-644C-FF00-A4A9-C989B1955D90";
+	setAttr ".t" -type "double3" -7.9999999999999991 0 -8.9837853908538818 ;
+	setAttr ".r" -type "double3" 0 -39.946570447111263 0 ;
+	setAttr ".s" -type "double3" 0.46833063842352762 0.46833063842352762 0.46833063842352762 ;
+	setAttr ".rp" -type "double3" 0 0 -0.016214609146118164 ;
+	setAttr ".rpt" -type "double3" 0 0 -5.2041704279304213e-18 ;
+	setAttr ".sp" -type "double3" 0 0 -0.016214609146118164 ;
+createNode mesh -n "Plant:revolvedSurface1ShapeShape" -p "|Plant:revolvedSurface1Shape";
+	rename -uid "3DC25826-544B-4756-2EE0-79A8CA2D0FDD";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode fosterParent -n "PlantRNfosterParent1";
+	rename -uid "439BE802-8F4A-957D-FF92-8A9BA44C8770";
+createNode transform -n "Plant:transform1" -p "PlantRNfosterParent1";
+	rename -uid "50A3D5F3-E841-C4F5-1C32-668C2512A593";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform2" -p "PlantRNfosterParent1";
+	rename -uid "B056C83B-2A40-7757-B90A-9DA08425FF84";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform3" -p "PlantRNfosterParent1";
+	rename -uid "CE956DE0-7C4B-E3B7-9251-21B6C38F60D2";
+	setAttr ".v" no;
+createNode mesh -n "Plant:polySurfaceShape8" -p "PlantRNfosterParent1";
+	rename -uid "345FDF4D-754F-F9CF-FADA-5398BE87FE55";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0 0 1 0 1 1 0 1 0.5
+		 0 0.5 1 0.25 0 0.25 1 0.25 0.5 0 0.5 0.125 0 0.125 0.5 0.125 1 0.5 0.5 0.375 0 0.375
+		 0.5 0.375 1 0.75 0 0.75 1 0.75 0.5 0.625 0 0.625 0.5 0.625 1 1 0.5 0.875 0 0.875
+		 0.5 0.875 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 27 ".vt[0:26]"  -0.062322415 8.77868748 -2.19088268 -0.48015803 11.62293053 -5.47425938
+		 -0.6352824 11.39041996 -5.147089 -0.51479644 8.74609375 -2.081645489 0.2448253 10.30801487 -4.030248642
+		 -1.11670673 10.25738049 -3.73052907 0.28342077 9.47018528 -3.0435431 -0.91705179 9.43800449 -2.81149197
+		 -0.43893731 9.35878086 -3.018999815 -0.30568042 8.74520874 -2.11387038 0.094079688 9.11295414 -2.59901118
+		 -0.36445439 9.059684753 -2.53449035 -0.72297412 9.06620121 -2.41514921 -0.56529647 10.028567314 -3.99765253
+		 0.33180943 9.88798428 -3.54375148 -0.51466876 9.68036079 -3.53021908 -1.063151598 9.85655499 -3.27201152
+		 -0.12833498 10.98752499 -4.78596401 -0.90152365 10.85293102 -4.4715333 -0.55371046 10.77211475 -4.6730423
+		 0.073557846 10.66821098 -4.43523979 -0.57146645 10.39716434 -4.36587334 -1.048515201 10.58169079 -4.12426329
+		 -0.53675735 11.48651409 -5.29958391 -0.3157233 11.30048656 -5.12662697 -0.53857219 11.13860512 -4.97435904
+		 -0.73924172 11.11238194 -4.80668783;
+	setAttr -s 42 ".ed[0:41]"  23 2 1 2 26 1 26 25 1 25 23 1 13 5 1 5 16 1
+		 16 15 1 15 13 1 8 7 1 7 12 1 12 11 1 11 8 1 10 6 1 6 8 1 11 10 1 0 10 1 11 9 1 9 0 1
+		 12 3 1 3 9 1 14 4 1 4 13 1 15 14 1 6 14 1 15 8 1 16 7 1 19 18 1 18 22 1 22 21 1 21 19 1
+		 20 17 1 17 19 1 21 20 1 4 20 1 21 13 1 22 5 1 24 1 1 1 23 1 25 24 1 17 24 1 25 19 1
+		 26 18 1;
+	setAttr -s 16 -ch 64 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 1 2 3
+		mu 0 4 23 2 26 25
+		f 4 4 5 6 7
+		mu 0 4 13 5 16 15
+		f 4 8 9 10 11
+		mu 0 4 8 7 12 11
+		f 4 12 13 -12 14
+		mu 0 4 10 6 8 11
+		f 4 15 -15 16 17
+		mu 0 4 0 10 11 9
+		f 4 18 19 -17 -11
+		mu 0 4 12 3 9 11
+		f 4 20 21 -8 22
+		mu 0 4 14 4 13 15
+		f 4 23 -23 24 -14
+		mu 0 4 6 14 15 8
+		f 4 25 -9 -25 -7
+		mu 0 4 16 7 8 15
+		f 4 26 27 28 29
+		mu 0 4 19 18 22 21
+		f 4 30 31 -30 32
+		mu 0 4 20 17 19 21
+		f 4 33 -33 34 -22
+		mu 0 4 4 20 21 13
+		f 4 35 -5 -35 -29
+		mu 0 4 22 5 13 21
+		f 4 36 37 -4 38
+		mu 0 4 24 1 23 25
+		f 4 39 -39 40 -32
+		mu 0 4 17 24 25 19
+		f 4 41 -27 -41 -3
+		mu 0 4 26 18 19 25;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "Plant:transform4" -p "PlantRNfosterParent1";
+	rename -uid "9A4D6A6D-404E-0437-9DB7-60809F017A61";
+	setAttr ".v" no;
+createNode mesh -n "Plant:polySurfaceShape7" -p "PlantRNfosterParent1";
+	rename -uid "FCD45C7C-704C-FB07-40D0-76A529D16CE8";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0 0 1 0 1 1 0 1 0.5
+		 0 0.5 1 0.25 0 0.25 1 0.25 0.5 0 0.5 0.125 0 0.125 0.5 0.125 1 0.5 0.5 0.375 0 0.375
+		 0.5 0.375 1 0.75 0 0.75 1 0.75 0.5 0.625 0 0.625 0.5 0.625 1 1 0.5 0.875 0 0.875
+		 0.5 0.875 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 27 ".vt[0:26]"  -0.062322415 8.77868748 -2.19088268 -0.48015803 11.62293053 -5.47425938
+		 -0.6352824 11.39041996 -5.147089 -0.51479644 8.74609375 -2.081645489 0.2448253 10.30801487 -4.030248642
+		 -1.11670673 10.25738049 -3.73052907 0.28342077 9.47018528 -3.0435431 -0.91705179 9.43800449 -2.81149197
+		 -0.43893731 9.35878086 -3.018999815 -0.30568042 8.74520874 -2.11387038 0.094079688 9.11295414 -2.59901118
+		 -0.36445439 9.059684753 -2.53449035 -0.72297412 9.06620121 -2.41514921 -0.56529647 10.028567314 -3.99765253
+		 0.33180943 9.88798428 -3.54375148 -0.51466876 9.68036079 -3.53021908 -1.063151598 9.85655499 -3.27201152
+		 -0.12833498 10.98752499 -4.78596401 -0.90152365 10.85293102 -4.4715333 -0.55371046 10.77211475 -4.6730423
+		 0.073557846 10.66821098 -4.43523979 -0.57146645 10.39716434 -4.36587334 -1.048515201 10.58169079 -4.12426329
+		 -0.53675735 11.48651409 -5.29958391 -0.3157233 11.30048656 -5.12662697 -0.53857219 11.13860512 -4.97435904
+		 -0.73924172 11.11238194 -4.80668783;
+	setAttr -s 42 ".ed[0:41]"  23 2 1 2 26 1 26 25 1 25 23 1 13 5 1 5 16 1
+		 16 15 1 15 13 1 8 7 1 7 12 1 12 11 1 11 8 1 10 6 1 6 8 1 11 10 1 0 10 1 11 9 1 9 0 1
+		 12 3 1 3 9 1 14 4 1 4 13 1 15 14 1 6 14 1 15 8 1 16 7 1 19 18 1 18 22 1 22 21 1 21 19 1
+		 20 17 1 17 19 1 21 20 1 4 20 1 21 13 1 22 5 1 24 1 1 1 23 1 25 24 1 17 24 1 25 19 1
+		 26 18 1;
+	setAttr -s 16 -ch 64 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 1 2 3
+		mu 0 4 23 2 26 25
+		f 4 4 5 6 7
+		mu 0 4 13 5 16 15
+		f 4 8 9 10 11
+		mu 0 4 8 7 12 11
+		f 4 12 13 -12 14
+		mu 0 4 10 6 8 11
+		f 4 15 -15 16 17
+		mu 0 4 0 10 11 9
+		f 4 18 19 -17 -11
+		mu 0 4 12 3 9 11
+		f 4 20 21 -8 22
+		mu 0 4 14 4 13 15
+		f 4 23 -23 24 -14
+		mu 0 4 6 14 15 8
+		f 4 25 -9 -25 -7
+		mu 0 4 16 7 8 15
+		f 4 26 27 28 29
+		mu 0 4 19 18 22 21
+		f 4 30 31 -30 32
+		mu 0 4 20 17 19 21
+		f 4 33 -33 34 -22
+		mu 0 4 4 20 21 13
+		f 4 35 -5 -35 -29
+		mu 0 4 22 5 13 21
+		f 4 36 37 -4 38
+		mu 0 4 24 1 23 25
+		f 4 39 -39 40 -32
+		mu 0 4 17 24 25 19
+		f 4 41 -27 -41 -3
+		mu 0 4 26 18 19 25;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "Plant:transform5" -p "PlantRNfosterParent1";
+	rename -uid "0365AB8F-AE4D-4FCC-2CBD-89B3F4AC3951";
+	setAttr ".v" no;
+createNode mesh -n "Plant:polySurfaceShape6" -p "PlantRNfosterParent1";
+	rename -uid "E46DC973-E94C-BB43-3F2E-45AD0C734CEA";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0 0 1 0 1 1 0 1 0.5
+		 0 0.5 1 0.25 0 0.25 1 0.25 0.5 0 0.5 0.125 0 0.125 0.5 0.125 1 0.5 0.5 0.375 0 0.375
+		 0.5 0.375 1 0.75 0 0.75 1 0.75 0.5 0.625 0 0.625 0.5 0.625 1 1 0.5 0.875 0 0.875
+		 0.5 0.875 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 27 ".vt[0:26]"  -0.062322415 8.77868748 -2.19088268 -0.48015803 11.62293053 -5.47425938
+		 -0.6352824 11.39041996 -5.147089 -0.51479644 8.74609375 -2.081645489 0.2448253 10.30801487 -4.030248642
+		 -1.11670673 10.25738049 -3.73052907 0.28342077 9.47018528 -3.0435431 -0.91705179 9.43800449 -2.81149197
+		 -0.43893731 9.35878086 -3.018999815 -0.30568042 8.74520874 -2.11387038 0.094079688 9.11295414 -2.59901118
+		 -0.36445439 9.059684753 -2.53449035 -0.72297412 9.06620121 -2.41514921 -0.56529647 10.028567314 -3.99765253
+		 0.33180943 9.88798428 -3.54375148 -0.51466876 9.68036079 -3.53021908 -1.063151598 9.85655499 -3.27201152
+		 -0.12833498 10.98752499 -4.78596401 -0.90152365 10.85293102 -4.4715333 -0.55371046 10.77211475 -4.6730423
+		 0.073557846 10.66821098 -4.43523979 -0.57146645 10.39716434 -4.36587334 -1.048515201 10.58169079 -4.12426329
+		 -0.53675735 11.48651409 -5.29958391 -0.3157233 11.30048656 -5.12662697 -0.53857219 11.13860512 -4.97435904
+		 -0.73924172 11.11238194 -4.80668783;
+	setAttr -s 42 ".ed[0:41]"  23 2 1 2 26 1 26 25 1 25 23 1 13 5 1 5 16 1
+		 16 15 1 15 13 1 8 7 1 7 12 1 12 11 1 11 8 1 10 6 1 6 8 1 11 10 1 0 10 1 11 9 1 9 0 1
+		 12 3 1 3 9 1 14 4 1 4 13 1 15 14 1 6 14 1 15 8 1 16 7 1 19 18 1 18 22 1 22 21 1 21 19 1
+		 20 17 1 17 19 1 21 20 1 4 20 1 21 13 1 22 5 1 24 1 1 1 23 1 25 24 1 17 24 1 25 19 1
+		 26 18 1;
+	setAttr -s 16 -ch 64 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 1 2 3
+		mu 0 4 23 2 26 25
+		f 4 4 5 6 7
+		mu 0 4 13 5 16 15
+		f 4 8 9 10 11
+		mu 0 4 8 7 12 11
+		f 4 12 13 -12 14
+		mu 0 4 10 6 8 11
+		f 4 15 -15 16 17
+		mu 0 4 0 10 11 9
+		f 4 18 19 -17 -11
+		mu 0 4 12 3 9 11
+		f 4 20 21 -8 22
+		mu 0 4 14 4 13 15
+		f 4 23 -23 24 -14
+		mu 0 4 6 14 15 8
+		f 4 25 -9 -25 -7
+		mu 0 4 16 7 8 15
+		f 4 26 27 28 29
+		mu 0 4 19 18 22 21
+		f 4 30 31 -30 32
+		mu 0 4 20 17 19 21
+		f 4 33 -33 34 -22
+		mu 0 4 4 20 21 13
+		f 4 35 -5 -35 -29
+		mu 0 4 22 5 13 21
+		f 4 36 37 -4 38
+		mu 0 4 24 1 23 25
+		f 4 39 -39 40 -32
+		mu 0 4 17 24 25 19
+		f 4 41 -27 -41 -3
+		mu 0 4 26 18 19 25;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "Plant:transform6" -p "PlantRNfosterParent1";
+	rename -uid "6B653D5C-764D-182A-453C-A2BC718BC7DC";
+	setAttr ".v" no;
+createNode mesh -n "Plant:polySurfaceShape5" -p "PlantRNfosterParent1";
+	rename -uid "D53CA7C2-BB41-60BA-9832-939D3EE8C2D8";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0 0 1 0 1 1 0 1 0.5
+		 0 0.5 1 0.25 0 0.25 1 0.25 0.5 0 0.5 0.125 0 0.125 0.5 0.125 1 0.5 0.5 0.375 0 0.375
+		 0.5 0.375 1 0.75 0 0.75 1 0.75 0.5 0.625 0 0.625 0.5 0.625 1 1 0.5 0.875 0 0.875
+		 0.5 0.875 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 27 ".vt[0:26]"  -0.062322415 8.77868748 -2.19088268 -0.48015803 11.62293053 -5.47425938
+		 -0.6352824 11.39041996 -5.147089 -0.51479644 8.74609375 -2.081645489 0.2448253 10.30801487 -4.030248642
+		 -1.11670673 10.25738049 -3.73052907 0.28342077 9.47018528 -3.0435431 -0.91705179 9.43800449 -2.81149197
+		 -0.43893731 9.35878086 -3.018999815 -0.30568042 8.74520874 -2.11387038 0.094079688 9.11295414 -2.59901118
+		 -0.36445439 9.059684753 -2.53449035 -0.72297412 9.06620121 -2.41514921 -0.56529647 10.028567314 -3.99765253
+		 0.33180943 9.88798428 -3.54375148 -0.51466876 9.68036079 -3.53021908 -1.063151598 9.85655499 -3.27201152
+		 -0.12833498 10.98752499 -4.78596401 -0.90152365 10.85293102 -4.4715333 -0.55371046 10.77211475 -4.6730423
+		 0.073557846 10.66821098 -4.43523979 -0.57146645 10.39716434 -4.36587334 -1.048515201 10.58169079 -4.12426329
+		 -0.53675735 11.48651409 -5.29958391 -0.3157233 11.30048656 -5.12662697 -0.53857219 11.13860512 -4.97435904
+		 -0.73924172 11.11238194 -4.80668783;
+	setAttr -s 42 ".ed[0:41]"  23 2 1 2 26 1 26 25 1 25 23 1 13 5 1 5 16 1
+		 16 15 1 15 13 1 8 7 1 7 12 1 12 11 1 11 8 1 10 6 1 6 8 1 11 10 1 0 10 1 11 9 1 9 0 1
+		 12 3 1 3 9 1 14 4 1 4 13 1 15 14 1 6 14 1 15 8 1 16 7 1 19 18 1 18 22 1 22 21 1 21 19 1
+		 20 17 1 17 19 1 21 20 1 4 20 1 21 13 1 22 5 1 24 1 1 1 23 1 25 24 1 17 24 1 25 19 1
+		 26 18 1;
+	setAttr -s 16 -ch 64 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 1 2 3
+		mu 0 4 23 2 26 25
+		f 4 4 5 6 7
+		mu 0 4 13 5 16 15
+		f 4 8 9 10 11
+		mu 0 4 8 7 12 11
+		f 4 12 13 -12 14
+		mu 0 4 10 6 8 11
+		f 4 15 -15 16 17
+		mu 0 4 0 10 11 9
+		f 4 18 19 -17 -11
+		mu 0 4 12 3 9 11
+		f 4 20 21 -8 22
+		mu 0 4 14 4 13 15
+		f 4 23 -23 24 -14
+		mu 0 4 6 14 15 8
+		f 4 25 -9 -25 -7
+		mu 0 4 16 7 8 15
+		f 4 26 27 28 29
+		mu 0 4 19 18 22 21
+		f 4 30 31 -30 32
+		mu 0 4 20 17 19 21
+		f 4 33 -33 34 -22
+		mu 0 4 4 20 21 13
+		f 4 35 -5 -35 -29
+		mu 0 4 22 5 13 21
+		f 4 36 37 -4 38
+		mu 0 4 24 1 23 25
+		f 4 39 -39 40 -32
+		mu 0 4 17 24 25 19
+		f 4 41 -27 -41 -3
+		mu 0 4 26 18 19 25;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "Plant:transform7" -p "PlantRNfosterParent1";
+	rename -uid "4A492FEA-EF4F-8C9B-520F-9FBC1C11B1F4";
+	setAttr ".v" no;
+createNode mesh -n "Plant:polySurfaceShape4" -p "PlantRNfosterParent1";
+	rename -uid "1122954A-1C4A-E86E-BB9F-D4977AE1F3FA";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0 0 1 0 1 1 0 1 0.5
+		 0 0.5 1 0.25 0 0.25 1 0.25 0.5 0 0.5 0.125 0 0.125 0.5 0.125 1 0.5 0.5 0.375 0 0.375
+		 0.5 0.375 1 0.75 0 0.75 1 0.75 0.5 0.625 0 0.625 0.5 0.625 1 1 0.5 0.875 0 0.875
+		 0.5 0.875 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 27 ".vt[0:26]"  -0.062322415 8.77868748 -2.19088268 -0.48015803 11.62293053 -5.47425938
+		 -0.6352824 11.39041996 -5.147089 -0.51479644 8.74609375 -2.081645489 0.2448253 10.30801487 -4.030248642
+		 -1.11670673 10.25738049 -3.73052907 0.28342077 9.47018528 -3.0435431 -0.91705179 9.43800449 -2.81149197
+		 -0.43893731 9.35878086 -3.018999815 -0.30568042 8.74520874 -2.11387038 0.094079688 9.11295414 -2.59901118
+		 -0.36445439 9.059684753 -2.53449035 -0.72297412 9.06620121 -2.41514921 -0.56529647 10.028567314 -3.99765253
+		 0.33180943 9.88798428 -3.54375148 -0.51466876 9.68036079 -3.53021908 -1.063151598 9.85655499 -3.27201152
+		 -0.12833498 10.98752499 -4.78596401 -0.90152365 10.85293102 -4.4715333 -0.55371046 10.77211475 -4.6730423
+		 0.073557846 10.66821098 -4.43523979 -0.57146645 10.39716434 -4.36587334 -1.048515201 10.58169079 -4.12426329
+		 -0.53675735 11.48651409 -5.29958391 -0.3157233 11.30048656 -5.12662697 -0.53857219 11.13860512 -4.97435904
+		 -0.73924172 11.11238194 -4.80668783;
+	setAttr -s 42 ".ed[0:41]"  23 2 1 2 26 1 26 25 1 25 23 1 13 5 1 5 16 1
+		 16 15 1 15 13 1 8 7 1 7 12 1 12 11 1 11 8 1 10 6 1 6 8 1 11 10 1 0 10 1 11 9 1 9 0 1
+		 12 3 1 3 9 1 14 4 1 4 13 1 15 14 1 6 14 1 15 8 1 16 7 1 19 18 1 18 22 1 22 21 1 21 19 1
+		 20 17 1 17 19 1 21 20 1 4 20 1 21 13 1 22 5 1 24 1 1 1 23 1 25 24 1 17 24 1 25 19 1
+		 26 18 1;
+	setAttr -s 16 -ch 64 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 1 2 3
+		mu 0 4 23 2 26 25
+		f 4 4 5 6 7
+		mu 0 4 13 5 16 15
+		f 4 8 9 10 11
+		mu 0 4 8 7 12 11
+		f 4 12 13 -12 14
+		mu 0 4 10 6 8 11
+		f 4 15 -15 16 17
+		mu 0 4 0 10 11 9
+		f 4 18 19 -17 -11
+		mu 0 4 12 3 9 11
+		f 4 20 21 -8 22
+		mu 0 4 14 4 13 15
+		f 4 23 -23 24 -14
+		mu 0 4 6 14 15 8
+		f 4 25 -9 -25 -7
+		mu 0 4 16 7 8 15
+		f 4 26 27 28 29
+		mu 0 4 19 18 22 21
+		f 4 30 31 -30 32
+		mu 0 4 20 17 19 21
+		f 4 33 -33 34 -22
+		mu 0 4 4 20 21 13
+		f 4 35 -5 -35 -29
+		mu 0 4 22 5 13 21
+		f 4 36 37 -4 38
+		mu 0 4 24 1 23 25
+		f 4 39 -39 40 -32
+		mu 0 4 17 24 25 19
+		f 4 41 -27 -41 -3
+		mu 0 4 26 18 19 25;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "Plant:transform8" -p "PlantRNfosterParent1";
+	rename -uid "2BC13439-C84A-C655-67B2-A2BA6EA901D9";
+	setAttr ".v" no;
+createNode mesh -n "Plant:polySurfaceShape3" -p "PlantRNfosterParent1";
+	rename -uid "C2BA1065-7F41-6516-CA16-F496BC0EC55E";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0 0 1 0 1 1 0 1 0.5
+		 0 0.5 1 0.25 0 0.25 1 0.25 0.5 0 0.5 0.125 0 0.125 0.5 0.125 1 0.5 0.5 0.375 0 0.375
+		 0.5 0.375 1 0.75 0 0.75 1 0.75 0.5 0.625 0 0.625 0.5 0.625 1 1 0.5 0.875 0 0.875
+		 0.5 0.875 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 27 ".vt[0:26]"  -0.062322415 8.77868748 -2.19088268 -0.48015803 11.62293053 -5.47425938
+		 -0.6352824 11.39041996 -5.147089 -0.51479644 8.74609375 -2.081645489 0.2448253 10.30801487 -4.030248642
+		 -1.11670673 10.25738049 -3.73052907 0.28342077 9.47018528 -3.0435431 -0.91705179 9.43800449 -2.81149197
+		 -0.43893731 9.35878086 -3.018999815 -0.30568042 8.74520874 -2.11387038 0.094079688 9.11295414 -2.59901118
+		 -0.36445439 9.059684753 -2.53449035 -0.72297412 9.06620121 -2.41514921 -0.56529647 10.028567314 -3.99765253
+		 0.33180943 9.88798428 -3.54375148 -0.51466876 9.68036079 -3.53021908 -1.063151598 9.85655499 -3.27201152
+		 -0.12833498 10.98752499 -4.78596401 -0.90152365 10.85293102 -4.4715333 -0.55371046 10.77211475 -4.6730423
+		 0.073557846 10.66821098 -4.43523979 -0.57146645 10.39716434 -4.36587334 -1.048515201 10.58169079 -4.12426329
+		 -0.53675735 11.48651409 -5.29958391 -0.3157233 11.30048656 -5.12662697 -0.53857219 11.13860512 -4.97435904
+		 -0.73924172 11.11238194 -4.80668783;
+	setAttr -s 42 ".ed[0:41]"  23 2 1 2 26 1 26 25 1 25 23 1 13 5 1 5 16 1
+		 16 15 1 15 13 1 8 7 1 7 12 1 12 11 1 11 8 1 10 6 1 6 8 1 11 10 1 0 10 1 11 9 1 9 0 1
+		 12 3 1 3 9 1 14 4 1 4 13 1 15 14 1 6 14 1 15 8 1 16 7 1 19 18 1 18 22 1 22 21 1 21 19 1
+		 20 17 1 17 19 1 21 20 1 4 20 1 21 13 1 22 5 1 24 1 1 1 23 1 25 24 1 17 24 1 25 19 1
+		 26 18 1;
+	setAttr -s 16 -ch 64 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 1 2 3
+		mu 0 4 23 2 26 25
+		f 4 4 5 6 7
+		mu 0 4 13 5 16 15
+		f 4 8 9 10 11
+		mu 0 4 8 7 12 11
+		f 4 12 13 -12 14
+		mu 0 4 10 6 8 11
+		f 4 15 -15 16 17
+		mu 0 4 0 10 11 9
+		f 4 18 19 -17 -11
+		mu 0 4 12 3 9 11
+		f 4 20 21 -8 22
+		mu 0 4 14 4 13 15
+		f 4 23 -23 24 -14
+		mu 0 4 6 14 15 8
+		f 4 25 -9 -25 -7
+		mu 0 4 16 7 8 15
+		f 4 26 27 28 29
+		mu 0 4 19 18 22 21
+		f 4 30 31 -30 32
+		mu 0 4 20 17 19 21
+		f 4 33 -33 34 -22
+		mu 0 4 4 20 21 13
+		f 4 35 -5 -35 -29
+		mu 0 4 22 5 13 21
+		f 4 36 37 -4 38
+		mu 0 4 24 1 23 25
+		f 4 39 -39 40 -32
+		mu 0 4 17 24 25 19
+		f 4 41 -27 -41 -3
+		mu 0 4 26 18 19 25;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "Plant:transform9" -p "PlantRNfosterParent1";
+	rename -uid "88AD4C7C-D843-B578-8B5E-5CB7038E65B3";
+	setAttr ".v" no;
+createNode mesh -n "Plant:polySurfaceShape2" -p "PlantRNfosterParent1";
+	rename -uid "51399942-7E4C-941E-400B-1496C3F68FA2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0 0 1 0 1 1 0 1 0.5
+		 0 0.5 1 0.25 0 0.25 1 0.25 0.5 0 0.5 0.125 0 0.125 0.5 0.125 1 0.5 0.5 0.375 0 0.375
+		 0.5 0.375 1 0.75 0 0.75 1 0.75 0.5 0.625 0 0.625 0.5 0.625 1 1 0.5 0.875 0 0.875
+		 0.5 0.875 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 27 ".vt[0:26]"  -0.062322415 8.77868748 -2.19088268 -0.48015803 11.62293053 -5.47425938
+		 -0.6352824 11.39041996 -5.147089 -0.51479644 8.74609375 -2.081645489 0.2448253 10.30801487 -4.030248642
+		 -1.11670673 10.25738049 -3.73052907 0.28342077 9.47018528 -3.0435431 -0.91705179 9.43800449 -2.81149197
+		 -0.43893731 9.35878086 -3.018999815 -0.30568042 8.74520874 -2.11387038 0.094079688 9.11295414 -2.59901118
+		 -0.36445439 9.059684753 -2.53449035 -0.72297412 9.06620121 -2.41514921 -0.56529647 10.028567314 -3.99765253
+		 0.33180943 9.88798428 -3.54375148 -0.51466876 9.68036079 -3.53021908 -1.063151598 9.85655499 -3.27201152
+		 -0.12833498 10.98752499 -4.78596401 -0.90152365 10.85293102 -4.4715333 -0.55371046 10.77211475 -4.6730423
+		 0.073557846 10.66821098 -4.43523979 -0.57146645 10.39716434 -4.36587334 -1.048515201 10.58169079 -4.12426329
+		 -0.53675735 11.48651409 -5.29958391 -0.3157233 11.30048656 -5.12662697 -0.53857219 11.13860512 -4.97435904
+		 -0.73924172 11.11238194 -4.80668783;
+	setAttr -s 42 ".ed[0:41]"  23 2 1 2 26 1 26 25 1 25 23 1 13 5 1 5 16 1
+		 16 15 1 15 13 1 8 7 1 7 12 1 12 11 1 11 8 1 10 6 1 6 8 1 11 10 1 0 10 1 11 9 1 9 0 1
+		 12 3 1 3 9 1 14 4 1 4 13 1 15 14 1 6 14 1 15 8 1 16 7 1 19 18 1 18 22 1 22 21 1 21 19 1
+		 20 17 1 17 19 1 21 20 1 4 20 1 21 13 1 22 5 1 24 1 1 1 23 1 25 24 1 17 24 1 25 19 1
+		 26 18 1;
+	setAttr -s 16 -ch 64 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 1 2 3
+		mu 0 4 23 2 26 25
+		f 4 4 5 6 7
+		mu 0 4 13 5 16 15
+		f 4 8 9 10 11
+		mu 0 4 8 7 12 11
+		f 4 12 13 -12 14
+		mu 0 4 10 6 8 11
+		f 4 15 -15 16 17
+		mu 0 4 0 10 11 9
+		f 4 18 19 -17 -11
+		mu 0 4 12 3 9 11
+		f 4 20 21 -8 22
+		mu 0 4 14 4 13 15
+		f 4 23 -23 24 -14
+		mu 0 4 6 14 15 8
+		f 4 25 -9 -25 -7
+		mu 0 4 16 7 8 15
+		f 4 26 27 28 29
+		mu 0 4 19 18 22 21
+		f 4 30 31 -30 32
+		mu 0 4 20 17 19 21
+		f 4 33 -33 34 -22
+		mu 0 4 4 20 21 13
+		f 4 35 -5 -35 -29
+		mu 0 4 22 5 13 21
+		f 4 36 37 -4 38
+		mu 0 4 24 1 23 25
+		f 4 39 -39 40 -32
+		mu 0 4 17 24 25 19
+		f 4 41 -27 -41 -3
+		mu 0 4 26 18 19 25;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "Plant:transform10" -p "PlantRNfosterParent1";
+	rename -uid "11FEC07E-A24A-6CD6-6BBE-529AB2CF5F7A";
+	setAttr ".v" no;
+createNode mesh -n "Plant:polySurfaceShape1" -p "PlantRNfosterParent1";
+	rename -uid "FAD4E970-EF42-5CA4-9389-E19C5AC3BDAC";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 27 ".uvst[0].uvsp[0:26]" -type "float2" 0 0 1 0 1 1 0 1 0.5
+		 0 0.5 1 0.25 0 0.25 1 0.25 0.5 0 0.5 0.125 0 0.125 0.5 0.125 1 0.5 0.5 0.375 0 0.375
+		 0.5 0.375 1 0.75 0 0.75 1 0.75 0.5 0.625 0 0.625 0.5 0.625 1 1 0.5 0.875 0 0.875
+		 0.5 0.875 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 27 ".vt[0:26]"  -0.062322415 8.77868748 -2.19088268 -0.48015803 11.62293053 -5.47425938
+		 -0.6352824 11.39041996 -5.147089 -0.51479644 8.74609375 -2.081645489 0.2448253 10.30801487 -4.030248642
+		 -1.11670673 10.25738049 -3.73052907 0.28342077 9.47018528 -3.0435431 -0.91705179 9.43800449 -2.81149197
+		 -0.43893731 9.35878086 -3.018999815 -0.30568042 8.74520874 -2.11387038 0.094079688 9.11295414 -2.59901118
+		 -0.36445439 9.059684753 -2.53449035 -0.72297412 9.06620121 -2.41514921 -0.56529647 10.028567314 -3.99765253
+		 0.33180943 9.88798428 -3.54375148 -0.51466876 9.68036079 -3.53021908 -1.063151598 9.85655499 -3.27201152
+		 -0.12833498 10.98752499 -4.78596401 -0.90152365 10.85293102 -4.4715333 -0.55371046 10.77211475 -4.6730423
+		 0.073557846 10.66821098 -4.43523979 -0.57146645 10.39716434 -4.36587334 -1.048515201 10.58169079 -4.12426329
+		 -0.53675735 11.48651409 -5.29958391 -0.3157233 11.30048656 -5.12662697 -0.53857219 11.13860512 -4.97435904
+		 -0.73924172 11.11238194 -4.80668783;
+	setAttr -s 42 ".ed[0:41]"  23 2 1 2 26 1 26 25 1 25 23 1 13 5 1 5 16 1
+		 16 15 1 15 13 1 8 7 1 7 12 1 12 11 1 11 8 1 10 6 1 6 8 1 11 10 1 0 10 1 11 9 1 9 0 1
+		 12 3 1 3 9 1 14 4 1 4 13 1 15 14 1 6 14 1 15 8 1 16 7 1 19 18 1 18 22 1 22 21 1 21 19 1
+		 20 17 1 17 19 1 21 20 1 4 20 1 21 13 1 22 5 1 24 1 1 1 23 1 25 24 1 17 24 1 25 19 1
+		 26 18 1;
+	setAttr -s 16 -ch 64 ".fc[0:15]" -type "polyFaces" 
+		f 4 0 1 2 3
+		mu 0 4 23 2 26 25
+		f 4 4 5 6 7
+		mu 0 4 13 5 16 15
+		f 4 8 9 10 11
+		mu 0 4 8 7 12 11
+		f 4 12 13 -12 14
+		mu 0 4 10 6 8 11
+		f 4 15 -15 16 17
+		mu 0 4 0 10 11 9
+		f 4 18 19 -17 -11
+		mu 0 4 12 3 9 11
+		f 4 20 21 -8 22
+		mu 0 4 14 4 13 15
+		f 4 23 -23 24 -14
+		mu 0 4 6 14 15 8
+		f 4 25 -9 -25 -7
+		mu 0 4 16 7 8 15
+		f 4 26 27 28 29
+		mu 0 4 19 18 22 21
+		f 4 30 31 -30 32
+		mu 0 4 20 17 19 21
+		f 4 33 -33 34 -22
+		mu 0 4 4 20 21 13
+		f 4 35 -5 -35 -29
+		mu 0 4 22 5 13 21
+		f 4 36 37 -4 38
+		mu 0 4 24 1 23 25
+		f 4 39 -39 40 -32
+		mu 0 4 17 24 25 19
+		f 4 41 -27 -41 -3
+		mu 0 4 26 18 19 25;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "Plant:transform27" -p "PlantRNfosterParent1";
+	rename -uid "0A02F8F1-3645-A4EC-0408-959B9A661672";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform11" -p "PlantRNfosterParent1";
+	rename -uid "CDF2121F-FA48-035C-7FEF-25AB9636ADE1";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform12" -p "PlantRNfosterParent1";
+	rename -uid "EB2FA76C-6B4E-A87B-160F-0B89A1299BBA";
+	setAttr ".v" no;
+createNode fosterParent -n "PlantRN1fosterParent1";
+	rename -uid "A7707959-6B4A-A175-E8B7-A7A47E4EBE5C";
+createNode transform -n "Plant:transform14" -p "PlantRN1fosterParent1";
+	rename -uid "0220ED08-1441-4340-7BA3-40A5EA166412";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform15" -p "PlantRN1fosterParent1";
+	rename -uid "1EA0CEC5-F247-46C8-A585-A3A4441E055C";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform16" -p "PlantRN1fosterParent1";
+	rename -uid "3A7CA2A8-394D-6D9F-8BB4-BFAF5775DB08";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform17" -p "PlantRN1fosterParent1";
+	rename -uid "8BA2D2F8-5441-201C-48AA-049966DC3625";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform18" -p "PlantRN1fosterParent1";
+	rename -uid "23ACAF29-7543-8861-BE8F-468E0911A70C";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform19" -p "PlantRN1fosterParent1";
+	rename -uid "34D7FA16-5E47-C384-244D-96B6A4815BBB";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform20" -p "PlantRN1fosterParent1";
+	rename -uid "41817612-6D48-B31F-8A6F-E3926EC64478";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform21" -p "PlantRN1fosterParent1";
+	rename -uid "29C0DE58-1B4B-2809-F835-8294A700F56E";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform22" -p "PlantRN1fosterParent1";
+	rename -uid "6A8D6305-7D46-18C3-48D0-17AC9BE7719D";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform23" -p "PlantRN1fosterParent1";
+	rename -uid "A5B2240C-454A-D899-4180-A49B68E80520";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform24" -p "PlantRN1fosterParent1";
+	rename -uid "7C750F46-D242-B711-A5C6-7896D1C3E12B";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform25" -p "PlantRN1fosterParent1";
+	rename -uid "08F8D4B1-5F4B-D376-7B26-33A19A275134";
+	setAttr ".v" no;
+createNode transform -n "Plant:transform26" -p "PlantRN1fosterParent1";
+	rename -uid "873230BB-8F48-2409-FE98-71B9F636936D";
+	setAttr ".v" no;
 createNode UsdDefaultSettings -n "UsdDefaultRenderSettings";
+	rename -uid "89C6B859-0B40-F40F-D737-EAAAD49253D0";
+	setAttr ".srl" -type "string" "#usda 1.0\n(\n    renderSettingsPrimPath = \"/Render/SceneRenderSettings\"\n)\n\ndef Scope \"Render\"\n{\n    def RenderSettings \"SceneRenderSettings\"\n    {\n        custom string adskUsd:externalCamera = \"|persp\" (\n            displayName = \"External Camera\"\n        )\n        rel products = </Render/BeautyProduct>\n    }\n\n    def RenderVar \"color\"\n    {\n        uniform string sourceName = \"color\"\n    }\n\n    def RenderProduct \"BeautyProduct\"\n    {\n        rel orderedVars = </Render/color>\n        token productName = \"./default.png\"\n    }\n}\n\n";
+	setAttr ".ssl" -type "string" "#usda 1.0\n\n";
+	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
+lockNode -l 1 ;
+createNode UsdDefaultSettings -n "UsdDefaultRenderSettings1";
 	rename -uid "C24AA870-4F4D-828F-8A85-87A470EF6AE2";
 	setAttr ".srl" -type "string" "#usda 1.0\n(\n    renderSettingsPrimPath = \"/Render/SceneRenderSettings\"\n)\n\ndef Scope \"Render\"\n{\n    def RenderSettings \"SceneRenderSettings\"\n    {\n        custom string adskUsd:externalCamera = \"|persp\" (\n            displayName = \"External Camera\"\n        )\n        rel products = </Render/BeautyProduct>\n    }\n\n    def RenderVar \"color\"\n    {\n        uniform string sourceName = \"color\"\n    }\n\n    def RenderProduct \"BeautyProduct\"\n    {\n        rel orderedVars = </Render/color>\n        token productName = \"./default.png\"\n    }\n}\n\n";
 	setAttr ".ssl" -type "string" "#usda 1.0\n\n";
 	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
 lockNode -l 1 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "43E31EC7-AD48-069A-039E-A78D99F85488";
+	rename -uid "09269183-D94A-CDD4-9482-A9820DC79604";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B70E6CD7-AD44-F405-0238-5AA75DF381CF";
+	rename -uid "FF67A3A4-A34A-AEE5-43D6-8A8F65D66202";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "D9E55347-9C45-CC09-992B-50BD3CDC458B";
+	rename -uid "4EA998C6-6848-422D-CA64-789285D8CA97";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F7493399-4144-F315-5D8B-F6AC484B20FF";
+	rename -uid "5EEDC3B6-7544-25DA-E85B-82A50E3E9B56";
 	setAttr ".cdl" 2;
 	setAttr -s 3 ".dli";
 	setAttr ".dli[2]" 1;
@@ -3145,11 +3817,11 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "6DC4C3E8-1E4D-7283-3422-8FB108D0EB9E";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "677BA627-064E-3441-4861-C9BA7E36BD87";
+	rename -uid "3E99F451-FF4A-451F-CDCF-D59203EB14F3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5B4DA3DD-6F4A-3B67-2923-789CDBBB268A";
 	setAttr ".g" yes;
-createNode UsdDefaultSettings -n "UsdDefaultRenderSettings1";
+createNode UsdDefaultSettings -n "UsdDefaultRenderSettings2";
 	rename -uid "9CEB10BC-A342-C3C9-A442-D3A7C4B4DE01";
 	setAttr ".srl" -type "string" "#usda 1.0\n(\n    renderSettingsPrimPath = \"/Render/SceneRenderSettings\"\n)\n\ndef Scope \"Render\"\n{\n    def RenderSettings \"SceneRenderSettings\"\n    {\n        custom string adskUsd:externalCamera = \"|persp\" (\n            displayName = \"External Camera\"\n        )\n        rel products = </Render/BeautyProduct>\n    }\n\n    def RenderVar \"color\"\n    {\n        uniform string sourceName = \"color\"\n    }\n\n    def RenderProduct \"BeautyProduct\"\n    {\n        rel orderedVars = </Render/color>\n        token productName = \"./default.png\"\n    }\n}\n\n";
 	setAttr ".ssl" -type "string" "#usda 1.0\n\n";
@@ -3166,17 +3838,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 556\n            -height 294\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n"
 		+ "            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n"
 		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n"
-		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n"
+		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 556\n            -height 294\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n"
 		+ "            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n"
 		+ "            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n"
-		+ "            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 556\n            -height 294\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 919\n            -height 633\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1119\n            -height 633\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
 		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
 		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n"
@@ -3200,8 +3872,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 919\\n    -height 633\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 919\\n    -height 633\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 633\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 633\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -3283,6 +3955,1415 @@ createNode groupParts -n "groupParts2";
 	rename -uid "E02D0121-C945-B85A-B18A-75A98A7D3485";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:125]";
+createNode reference -n "PlantRN";
+	rename -uid "5A7371E1-2047-C018-76CF-1096DE2FCFC9";
+	setAttr -s 116 ".phl";
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[85]" 0;
+	setAttr ".phl[86]" 0;
+	setAttr ".phl[87]" 0;
+	setAttr ".phl[105]" 0;
+	setAttr ".phl[106]" 0;
+	setAttr ".phl[107]" 0;
+	setAttr ".phl[108]" 0;
+	setAttr ".phl[109]" 0;
+	setAttr ".phl[110]" 0;
+	setAttr ".phl[111]" 0;
+	setAttr ".phl[112]" 0;
+	setAttr ".phl[113]" 0;
+	setAttr ".phl[114]" 0;
+	setAttr ".phl[115]" 0;
+	setAttr ".phl[116]" 0;
+	setAttr ".phl[117]" 0;
+	setAttr ".phl[118]" 0;
+	setAttr ".phl[119]" 0;
+	setAttr ".phl[120]" 0;
+	setAttr ".phl[121]" 0;
+	setAttr ".phl[122]" 0;
+	setAttr ".phl[123]" 0;
+	setAttr ".phl[124]" 0;
+	setAttr ".phl[125]" 0;
+	setAttr ".phl[126]" 0;
+	setAttr ".phl[127]" 0;
+	setAttr ".phl[128]" 0;
+	setAttr ".phl[129]" 0;
+	setAttr ".phl[130]" 0;
+	setAttr ".phl[131]" 0;
+	setAttr ".phl[132]" 0;
+	setAttr ".phl[133]" 0;
+	setAttr ".phl[134]" 0;
+	setAttr ".phl[135]" 0;
+	setAttr ".phl[136]" 0;
+	setAttr ".phl[137]" 0;
+	setAttr ".phl[138]" 0;
+	setAttr ".phl[139]" 0;
+	setAttr ".phl[140]" 0;
+	setAttr ".phl[141]" 0;
+	setAttr ".phl[142]" 0;
+	setAttr ".phl[143]" 0;
+	setAttr ".phl[144]" 0;
+	setAttr ".phl[145]" 0;
+	setAttr ".phl[146]" 0;
+	setAttr ".phl[147]" 0;
+	setAttr ".phl[148]" 0;
+	setAttr ".phl[149]" 0;
+	setAttr ".phl[150]" 0;
+	setAttr ".phl[151]" 0;
+	setAttr ".phl[152]" 0;
+	setAttr ".phl[153]" 0;
+	setAttr ".phl[154]" 0;
+	setAttr ".phl[155]" 0;
+	setAttr ".phl[156]" 0;
+	setAttr ".phl[157]" 0;
+	setAttr ".phl[158]" 0;
+	setAttr ".phl[159]" 0;
+	setAttr ".phl[160]" 0;
+	setAttr ".phl[161]" 0;
+	setAttr ".phl[162]" 0;
+	setAttr ".phl[163]" 0;
+	setAttr ".phl[164]" 0;
+	setAttr ".phl[165]" 0;
+	setAttr ".phl[166]" 0;
+	setAttr ".phl[167]" 0;
+	setAttr ".phl[168]" 0;
+	setAttr ".phl[169]" 0;
+	setAttr ".phl[170]" 0;
+	setAttr ".phl[171]" 0;
+	setAttr ".phl[172]" 0;
+	setAttr ".phl[173]" 0;
+	setAttr ".phl[174]" 0;
+	setAttr ".phl[175]" 0;
+	setAttr ".phl[176]" 0;
+	setAttr ".phl[177]" 0;
+	setAttr ".phl[178]" 0;
+	setAttr ".phl[179]" 0;
+	setAttr ".phl[180]" 0;
+	setAttr ".phl[181]" 0;
+	setAttr ".phl[182]" 0;
+	setAttr ".phl[183]" 0;
+	setAttr ".phl[184]" 0;
+	setAttr ".phl[185]" 0;
+	setAttr ".phl[186]" 0;
+	setAttr ".phl[187]" 0;
+	setAttr ".phl[188]" 0;
+	setAttr ".phl[189]" 0;
+	setAttr ".phl[190]" 0;
+	setAttr ".phl[191]" 0;
+	setAttr ".phl[192]" 0;
+	setAttr ".phl[193]" 0;
+	setAttr ".phl[194]" 0;
+	setAttr ".phl[195]" 0;
+	setAttr ".phl[196]" 0;
+	setAttr ".phl[197]" 0;
+	setAttr ".phl[198]" 0;
+	setAttr ".phl[199]" 0;
+	setAttr ".phl[200]" 0;
+	setAttr ".phl[201]" 0;
+	setAttr ".phl[202]" 0;
+	setAttr ".phl[203]" 0;
+	setAttr ".phl[204]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"PlantRN"
+		"PlantRN" 34
+		0 "|Plant:curve1" "|group1" "-s -r "
+		0 "|Plant:curve2" "|group1" "-s -r "
+		0 "|Plant:curve3" "|group1" "-s -r "
+		0 "|Plant:curve4" "|group1" "-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape1" "|PlantRNfosterParent1|Plant:transform11" 
+		"-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape1" "|PlantRNfosterParent1|Plant:transform2" 
+		"-s -r "
+		3 "Plant:pasted__nurbsTessellate3.outputPolygon" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.inMesh" 
+		""
+		3 "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "Plant:polyCloseBorder1.output" "|PlantRNfosterParent1|Plant:transform13|Plant:revolvedSurfaceShape1.inMesh" 
+		""
+		3 "Plant:pasted__nurbsTessellate2.outputPolygon" "|PlantRNfosterParent1|Plant:transform11|Plant:pasted__loftedSurfaceShape1.inMesh" 
+		""
+		3 "|PlantRNfosterParent1|Plant:transform11|Plant:pasted__loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "Plant:nurbsTessellate2.outputPolygon" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.inMesh" 
+		""
+		3 "Plant:pasted__pasted__nurbsTessellate3.outputPolygon" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.inMesh" 
+		""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.inMesh" 
+		"PlantRN.placeHolderList[9]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[10]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[11]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[12]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN.placeHolderList[13]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN.placeHolderList[14]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[15]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[16]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform11|Plant:pasted__loftedSurfaceShape1.inMesh" 
+		"PlantRN.placeHolderList[81]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform11|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[82]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform11|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[83]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform11|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[84]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform11|Plant:pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN.placeHolderList[85]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform11|Plant:pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN.placeHolderList[86]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform11|Plant:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[87]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform11|Plant:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[88]" ""
+		5 3 "PlantRN" "Plant:polyCloseBorder1.output" "PlantRN.placeHolderList[105]" 
+		"Plant:revolvedSurfaceShape1.i"
+		5 3 "PlantRN" "Plant:nurbsTessellate2.outputPolygon" "PlantRN.placeHolderList[106]" 
+		"Plant:loftedSurfaceShape1.i"
+		5 3 "PlantRN" "Plant:pasted__nurbsTessellate2.outputPolygon" "PlantRN.placeHolderList[107]" 
+		"|Plant:pasted__loftedSurfaceShape1.i"
+		5 3 "PlantRN" "Plant:pasted__nurbsTessellate3.outputPolygon" "PlantRN.placeHolderList[108]" 
+		"|Plant:pasted__loftedSurfaceShape1.i"
+		5 3 "PlantRN" "Plant:pasted__pasted__nurbsTessellate3.outputPolygon" 
+		"PlantRN.placeHolderList[109]" "Plant:pasted__pasted__loftedSurfaceShape1.i"
+		"PlantRN" 248
+		0 "|Plant:revolvedSurfaceShape1" "|group1|Plant:revolvedSurface1|Plant:transform13" 
+		"-s -r "
+		0 "|Plant:loftedSurface1" "|group1" "-s -r "
+		0 "|Plant:loftedSurfaceShape1" "|PlantRNfosterParent1|Plant:transform12" 
+		"-s -r "
+		0 "|Plant:group" "|group1" "-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape1" "|PlantRNfosterParent1|Plant:transform27" 
+		"-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape2" "|PlantRNfosterParent1|Plant:transform10" 
+		"-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape3" "|PlantRNfosterParent1|Plant:transform9" 
+		"-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape4" "|PlantRNfosterParent1|Plant:transform8" 
+		"-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape5" "|PlantRNfosterParent1|Plant:transform7" 
+		"-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape6" "|PlantRNfosterParent1|Plant:transform6" 
+		"-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape7" "|PlantRNfosterParent1|Plant:transform5" 
+		"-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape8" "|PlantRNfosterParent1|Plant:transform4" 
+		"-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape9" "|PlantRNfosterParent1|Plant:transform3" 
+		"-s -r "
+		0 "|Plant:group1" "|group1" "-s -r "
+		0 "|Plant:group2" "|group1" "-s -r "
+		0 "|Plant:pasted__pasted__loftedSurfaceShape1" "|PlantRNfosterParent1|Plant:transform1" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform12" "|group1|Plant:loftedSurface1" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform11" "|group1|Plant:group|Plant:pasted__loftedSurface1" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform27" "|group1|Plant:group|Plant:pasted__loftedSurface1" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:polySurfaceShape1" "|group1|Plant:group|Plant:pasted__loftedSurface2" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform10" "|group1|Plant:group|Plant:pasted__loftedSurface2" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:polySurfaceShape2" "|group1|Plant:group|Plant:pasted__loftedSurface3" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform9" "|group1|Plant:group|Plant:pasted__loftedSurface3" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:polySurfaceShape3" "|group1|Plant:group|Plant:pasted__loftedSurface4" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform8" "|group1|Plant:group|Plant:pasted__loftedSurface4" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:polySurfaceShape4" "|group1|Plant:group|Plant:pasted__loftedSurface5" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform7" "|group1|Plant:group|Plant:pasted__loftedSurface5" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:polySurfaceShape5" "|group1|Plant:group|Plant:pasted__loftedSurface6" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform6" "|group1|Plant:group|Plant:pasted__loftedSurface6" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:polySurfaceShape6" "|group1|Plant:group|Plant:pasted__loftedSurface7" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform5" "|group1|Plant:group|Plant:pasted__loftedSurface7" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:polySurfaceShape7" "|group1|Plant:group|Plant:pasted__loftedSurface8" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform4" "|group1|Plant:group|Plant:pasted__loftedSurface8" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:polySurfaceShape8" "|group1|Plant:group|Plant:pasted__loftedSurface9" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform3" "|group1|Plant:group|Plant:pasted__loftedSurface9" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform2" "|group1|Plant:group1|Plant:pasted__loftedSurface1" 
+		"-s -r "
+		0 "|PlantRNfosterParent1|Plant:transform1" "|group1|Plant:group2|Plant:pasted__group1|Plant:pasted__pasted__loftedSurface1" 
+		"-s -r "
+		2 "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1" 
+		"intermediateObject" " 1"
+		2 "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1" 
+		"instObjGroups.objectGroups" " -s 2"
+		2 "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|group1|Plant:loftedSurface1" "translate" " -type \"double3\" 0 0 0"
+		2 "|group1|Plant:loftedSurface1" "rotate" " -type \"double3\" 0 0 0"
+		2 "|group1|Plant:loftedSurface1" "rotateOrder" " 0"
+		2 "|group1|Plant:loftedSurface1" "scale" " -type \"double3\" 1 1 1"
+		2 "|group1|Plant:loftedSurface1" "shear" " -type \"double3\" 0 0 0"
+		2 "|group1|Plant:loftedSurface1" "rotatePivot" " -type \"double3\" -0.3968234658241272 12.33765339851379395 -2.56319819390773773"
+		
+		2 "|group1|Plant:loftedSurface1" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:loftedSurface1" "scalePivot" " -type \"double3\" -0.3968234658241272 12.33765339851379395 -2.56319819390773773"
+		
+		2 "|group1|Plant:loftedSurface1" "scalePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:loftedSurface1" "rotateAxis" " -type \"double3\" 0 0 0"
+		2 "|group1|Plant:loftedSurface1" "inheritsTransform" " 0"
+		2 "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1" "intermediateObject" 
+		" 1"
+		2 "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1" "instObjGroups.objectGroups" 
+		" -s 2"
+		2 "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface1" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface1" "rotatePivot" " -type \"double3\" -0.39244864881038666 10.18406963348388672 -3.77795243263244629"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface1" "scalePivot" " -type \"double3\" -0.39244864881038666 10.18406963348388672 -3.77795243263244629"
+		
+		2 "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1" 
+		"intermediateObject" " 1"
+		2 "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface2" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface2" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface2" "rotatePivot" " -type \"double3\" -2.47216665744781494 10.14694023132324219 -2.76401799917221069"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface2" "scalePivot" " -type \"double3\" -2.47216665744781494 10.14694023132324219 -2.76401799917221069"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface2" "scalePivotTranslate" 
+		" -type \"double3\" 0 0 0"
+		2 "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2" 
+		"intermediateObject" " 1"
+		2 "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2" 
+		"instObjGroups.objectGroups" " -s 2"
+		2 "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface3" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface3" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface3" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface3" "rotatePivot" " -type \"double3\" -3.72880959510803223 10.11044168472290039 -0.73744434118270874"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface3" "scalePivot" " -type \"double3\" -3.72880959510803223 10.11044168472290039 -0.73744434118270874"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface3" "scalePivotTranslate" 
+		" -type \"double3\" 0 0 0"
+		2 "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3" 
+		"intermediateObject" " 1"
+		2 "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3" 
+		"instObjGroups.objectGroups" " -s 2"
+		2 "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface4" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface4" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface4" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface4" "rotatePivot" " -type \"double3\" -3.43931752443313599 10.07456445693969727 1.47131100296974182"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface4" "scalePivot" " -type \"double3\" -3.43931752443313599 10.07456445693969727 1.47131100296974182"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface4" "scalePivotTranslate" 
+		" -type \"double3\" 0 0 0"
+		2 "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4" 
+		"intermediateObject" " 1"
+		2 "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4" 
+		"instObjGroups.objectGroups" " -s 2"
+		2 "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface5" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface5" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface5" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface5" "rotatePivot" " -type \"double3\" -0.44632554054260254 10.03929758071899414 3.78207683563232422"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface5" "scalePivot" " -type \"double3\" -0.44632554054260254 10.03929758071899414 3.78207683563232422"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface5" "scalePivotTranslate" 
+		" -type \"double3\" 0 0 0"
+		2 "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5" 
+		"intermediateObject" " 1"
+		2 "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5" 
+		"instObjGroups.objectGroups" " -s 2"
+		2 "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface6" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface6" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface6" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface6" "rotatePivot" " -type \"double3\" 1.68706628680229187 10.00462961196899414 -3.3363640308380127"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface6" "scalePivot" " -type \"double3\" 1.68706628680229187 10.00462961196899414 -3.3363640308380127"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface6" "scalePivotTranslate" 
+		" -type \"double3\" 0 0 0"
+		2 "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6" 
+		"intermediateObject" " 1"
+		2 "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6" 
+		"instObjGroups.objectGroups" " -s 2"
+		2 "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface7" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface7" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface7" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface7" "rotatePivot" " -type \"double3\" 2.47216665744781494 9.970550537109375 2.76401799917221069"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface7" "scalePivot" " -type \"double3\" 2.47216665744781494 9.970550537109375 2.76401799917221069"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface7" "scalePivotTranslate" 
+		" -type \"double3\" 0 0 0"
+		2 "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7" 
+		"intermediateObject" " 1"
+		2 "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7" 
+		"instObjGroups.objectGroups" " -s 2"
+		2 "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface8" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface8" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface8" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface8" "rotatePivot" " -type \"double3\" 3.72880959510803223 9.93705129623413086 0.73744434118270874"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface8" "scalePivot" " -type \"double3\" 3.72880959510803223 9.93705129623413086 0.73744434118270874"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface8" "scalePivotTranslate" 
+		" -type \"double3\" 0 0 0"
+		2 "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8" 
+		"intermediateObject" " 1"
+		2 "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8" 
+		"instObjGroups.objectGroups" " -s 2"
+		2 "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface9" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface9" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface9" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface9" "rotatePivot" " -type \"double3\" 3.43931752443313599 9.90412139892578125 -1.47131100296974182"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface9" "scalePivot" " -type \"double3\" 3.43931752443313599 9.90412139892578125 -1.47131100296974182"
+		
+		2 "|group1|Plant:group|Plant:pasted__loftedSurface9" "scalePivotTranslate" 
+		" -type \"double3\" 0 0 0"
+		2 "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9" 
+		"intermediateObject" " 1"
+		2 "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9" 
+		"instObjGroups.objectGroups" " -s 2"
+		2 "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|group1|Plant:group1|Plant:pasted__loftedSurface1" "scale" " -type \"double3\" 1 1 1"
+		
+		2 "|group1|Plant:group1|Plant:pasted__loftedSurface1" "rotatePivot" " -type \"double3\" -0.3968234658241272 13.5073847770690918 1.97617729101330042"
+		
+		2 "|group1|Plant:group1|Plant:pasted__loftedSurface1" "scalePivot" " -type \"double3\" -0.3968234658241272 13.5073847770690918 1.97617729101330042"
+		
+		2 "|group1|Plant:group1|Plant:pasted__loftedSurface1|Plant:pasted__loftedSurfaceShape1" 
+		"intermediateObject" " 1"
+		2 "|group1|Plant:group1|Plant:pasted__loftedSurface1|Plant:pasted__loftedSurfaceShape1" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|group1|Plant:group2|Plant:pasted__group1|Plant:pasted__pasted__loftedSurface1" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|group1|Plant:group2|Plant:pasted__group1|Plant:pasted__pasted__loftedSurface1" 
+		"rotatePivot" " -type \"double3\" -1.30978342890739441 12.41269135475158691 0.13824719190597534"
+		
+		2 "|group1|Plant:group2|Plant:pasted__group1|Plant:pasted__pasted__loftedSurface1" 
+		"scalePivot" " -type \"double3\" -1.30978342890739441 12.41269135475158691 0.13824719190597534"
+		
+		2 "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1" 
+		"intermediateObject" " 1"
+		2 "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1" 
+		"instObjGroups.objectGroups" " -s 2"
+		2 "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		3 "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 3 "PlantRN" "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[110]" ""
+		5 4 "PlantRN" "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[111]" ""
+		5 4 "PlantRN" "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[112]" ""
+		5 3 "PlantRN" "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.outMesh" 
+		"PlantRN.placeHolderList[113]" ""
+		5 4 "PlantRN" "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.inMesh" 
+		"PlantRN.placeHolderList[114]" ""
+		5 3 "PlantRN" "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.worldMatrix" 
+		"PlantRN.placeHolderList[115]" ""
+		5 3 "PlantRN" "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[116]" ""
+		5 4 "PlantRN" "|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[117]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[118]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[119]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[120]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN.placeHolderList[121]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.inMesh" 
+		"PlantRN.placeHolderList[122]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN.placeHolderList[123]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[124]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[125]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[126]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[127]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[128]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.outMesh" 
+		"PlantRN.placeHolderList[129]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.inMesh" 
+		"PlantRN.placeHolderList[130]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.worldMatrix" 
+		"PlantRN.placeHolderList[131]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[132]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[133]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[134]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[135]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[136]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.outMesh" 
+		"PlantRN.placeHolderList[137]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.inMesh" 
+		"PlantRN.placeHolderList[138]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.worldMatrix" 
+		"PlantRN.placeHolderList[139]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[140]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[141]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[142]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[143]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[144]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.outMesh" 
+		"PlantRN.placeHolderList[145]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.inMesh" 
+		"PlantRN.placeHolderList[146]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.worldMatrix" 
+		"PlantRN.placeHolderList[147]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[148]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[149]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[150]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[151]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[152]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.outMesh" 
+		"PlantRN.placeHolderList[153]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.inMesh" 
+		"PlantRN.placeHolderList[154]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.worldMatrix" 
+		"PlantRN.placeHolderList[155]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[156]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[157]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[158]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[159]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[160]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.outMesh" 
+		"PlantRN.placeHolderList[161]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.inMesh" 
+		"PlantRN.placeHolderList[162]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.worldMatrix" 
+		"PlantRN.placeHolderList[163]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[164]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[165]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[166]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[167]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[168]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.outMesh" 
+		"PlantRN.placeHolderList[169]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.inMesh" 
+		"PlantRN.placeHolderList[170]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.worldMatrix" 
+		"PlantRN.placeHolderList[171]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[172]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[173]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[174]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[175]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[176]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.outMesh" 
+		"PlantRN.placeHolderList[177]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.inMesh" 
+		"PlantRN.placeHolderList[178]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.worldMatrix" 
+		"PlantRN.placeHolderList[179]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[180]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[181]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[182]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[183]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[184]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.outMesh" 
+		"PlantRN.placeHolderList[185]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.inMesh" 
+		"PlantRN.placeHolderList[186]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.worldMatrix" 
+		"PlantRN.placeHolderList[187]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[188]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[189]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
+		"PlantRN.placeHolderList[190]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN.placeHolderList[191]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN.placeHolderList[192]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN.placeHolderList[193]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN.placeHolderList[194]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN.placeHolderList[195]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN.placeHolderList[196]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[197]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[198]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[199]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.outMesh" 
+		"PlantRN.placeHolderList[200]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.inMesh" 
+		"PlantRN.placeHolderList[201]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.worldMatrix" 
+		"PlantRN.placeHolderList[202]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[203]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[204]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode polyConnectComponents -n "polyConnectComponents1";
+	rename -uid "013C8994-1D46-2AB2-F29D-A7978002571A";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents2";
+	rename -uid "89C8A648-794C-CF68-27FE-F4B5108E313C";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents3";
+	rename -uid "D5C83F45-ED48-B0FB-726A-04AABC0ECC19";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents4";
+	rename -uid "08D0A5A4-6F40-9126-3B8C-F5AF93282845";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents5";
+	rename -uid "12D5E897-F04A-A563-C593-58818433C859";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents6";
+	rename -uid "54F15AF8-3446-0A8D-6894-EEAAEB2B5E83";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents7";
+	rename -uid "8930BA78-004A-A894-4EA0-6CB40075D8AF";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents8";
+	rename -uid "35D8F5FD-F044-A0E5-DD4C-E0BEF94A9683";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents9";
+	rename -uid "59BCBD76-DC4C-6A29-30B2-148C6C8E175E";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents10";
+	rename -uid "4495D275-4C49-EF51-79A3-369FB807AF7C";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents11";
+	rename -uid "7A2DA676-324D-2DB5-2C33-B6933DA47DD2";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents12";
+	rename -uid "40912BD2-5048-54B2-5601-E5B896B965EC";
+	setAttr ".uopa" yes;
+createNode polyConnectComponents -n "polyConnectComponents13";
+	rename -uid "EFBF773C-114B-32A7-64BA-B792DA029FE4";
+	setAttr ".uopa" yes;
+createNode transformGeometry -n "transformGeometry1";
+	rename -uid "676B85C6-2241-E40D-7621-39AF3F7A0AA4";
+	setAttr ".txf" -type "matrix" 1 0 0 0 0 0.9244374800877615 0 0 0 0 1 0 0 0.61089024407680981 0 1;
+createNode transformGeometry -n "transformGeometry2";
+	rename -uid "4B64057E-4C42-AD9D-09B7-CB9A1F8D24F5";
+	setAttr ".txf" -type "matrix" 0.80901699437494745 0 -0.58778525229247314 0 0 0.98299999999999998 0 0
+		 0.58778525229247314 0 0.80901699437494745 0 0 0.13599999999997361 0 1;
+createNode transformGeometry -n "transformGeometry3";
+	rename -uid "4CF79A03-594C-2413-78D3-9181BA83A7DA";
+	setAttr ".txf" -type "matrix" 0.30901699437494745 0 -0.95105651629515364 0 0 0.96628899999999995 0 0
+		 0.95105651629515364 0 0.30901699437494745 0 0 0.26968800000004717 0 1;
+createNode transformGeometry -n "transformGeometry4";
+	rename -uid "9501BE24-F24A-A4F9-159E-3D8044916815";
+	setAttr ".txf" -type "matrix" -0.30901699437494745 0 -0.95105651629515364 0 0 0.94986208699999997 0 0
+		 0.95105651629515364 0 -0.30901699437494745 0 0 0.40110330399996053 0 1;
+createNode transformGeometry -n "transformGeometry5";
+	rename -uid "9DD72353-2445-E9E8-002E-0AADA1D11A9C";
+	setAttr ".txf" -type "matrix" -0.97288965404486771 0 -0.23126980142780726 0 0 0.93371443152099998 0 0
+		 0.23126980142780726 0 -0.97288965404486771 0 0 0.53028454783198664 0 1;
+createNode transformGeometry -n "transformGeometry6";
+	rename -uid "1EEF2570-1947-411F-A53A-98B84A74FF0F";
+	setAttr ".txf" -type "matrix" 0.83117919953231711 0 0.55600462072254153 0 0 0.91784128618514293 0 0
+		 -0.55600462072254153 0 0.83117919953231711 0 0 0.65726971051890382 0 1;
+createNode transformGeometry -n "transformGeometry7";
+	rename -uid "37890F26-9F40-22D5-33D0-5F92FBD7EEBC";
+	setAttr ".txf" -type "matrix" -0.80901699437494801 0 0.58778525229247325 0 0 0.90223798431999547 0 0
+		 -0.58778525229247325 0 -0.80901699437494801 0 0 0.7820961254400105 0 1;
+createNode transformGeometry -n "transformGeometry8";
+	rename -uid "D88D22FA-0C44-965C-906E-4EA12A10C363";
+	setAttr ".txf" -type "matrix" -0.3090169943749479 0 0.95105651629515431 0 0 0.88689993858655558 0 0
+		 -0.95105651629515431 0 -0.3090169943749479 0 0 0.9048004913075397 0 1;
+createNode transformGeometry -n "transformGeometry9";
+	rename -uid "62933F57-DB49-5F74-4DA3-08B026B6B2A5";
+	setAttr ".txf" -type "matrix" 0.30901699437494734 0 0.95105651629515431 0 0 0.87182263963058415 0 0
+		 -0.95105651629515431 0 0.30901699437494734 0 0 1.0254188829553006 0 1;
+createNode polyUnite -n "polyUnite1";
+	rename -uid "07E98977-EB4E-CB6A-583D-21825636F871";
+	setAttr -s 13 ".ip";
+	setAttr -s 13 ".im";
+createNode groupId -n "Plant:groupId1";
+	rename -uid "B5B9160B-474D-A45F-22D1-E3AAFB054904";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts1";
+	rename -uid "26CD161A-B843-C8A4-AA84-EFBA61A4DEC3";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:198]";
+createNode groupId -n "Plant:groupId2";
+	rename -uid "0F34EB59-DD4E-5D46-C9E7-22890811D9ED";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId3";
+	rename -uid "8B635803-E542-71A6-EB4F-2990560D8530";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts2";
+	rename -uid "79365B08-6D49-AAF5-0356-EBA42E4BDB24";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId4";
+	rename -uid "E2963299-ED44-BF22-AD3F-E09D2622659B";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId5";
+	rename -uid "FBA75A7C-9E4E-9FB5-49D0-B18E62F9AA25";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts3";
+	rename -uid "EE8AC3BB-6D4A-71CF-E215-A494F7FB9490";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId6";
+	rename -uid "FC265F84-4D45-9FCD-83E9-399A03F642B0";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId7";
+	rename -uid "3C28AAF9-B34C-01F7-7C50-EFADFB736AE6";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts4";
+	rename -uid "B56A1DCE-574C-9CC2-7A46-FA96E3D6FB6A";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId8";
+	rename -uid "FF4E3379-D043-C3D0-3FF3-FDB1EDC72BA7";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId9";
+	rename -uid "6B8A446B-AB4D-D3EF-35A2-CB94BCB038E0";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts5";
+	rename -uid "8684E5CB-164E-822D-8569-DC8155BA3178";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId10";
+	rename -uid "13431D2E-8547-0248-66A1-97B8E038F946";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId11";
+	rename -uid "4F1B655A-AD4F-428D-00EF-89A1DD1D64F7";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts6";
+	rename -uid "29F4681E-F04F-D5B0-D678-65A715EC31DE";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId12";
+	rename -uid "D70403E3-374E-7FE2-01E9-DA8300F7308D";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId13";
+	rename -uid "CB112B0F-7342-941F-3B96-92B314EEB8C8";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts7";
+	rename -uid "2FCFC9C7-9B4A-0845-56AF-F3B3602879ED";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId14";
+	rename -uid "C0B03429-6442-4365-48B0-0E8C686E10DE";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId15";
+	rename -uid "CF6559A8-FA48-A7DD-50B4-8B84CCBAAF73";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts8";
+	rename -uid "8E207737-C14B-62A9-42DB-B19E2C36C098";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId16";
+	rename -uid "4FF6AD9E-8D4D-9E54-6568-E4A6B85DCD92";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId17";
+	rename -uid "8B0D99F7-DF45-C7F7-1A2F-A69E670286E4";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts9";
+	rename -uid "08C4C78D-CB47-1247-10DF-0D9B5D5F3045";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId18";
+	rename -uid "687EBFA7-E34D-E9D3-A94A-E68484695574";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId19";
+	rename -uid "979302F0-5945-71E5-119F-E4959CF5AF5B";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts10";
+	rename -uid "FCF8176E-2848-F137-F105-FCA81EE0681C";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId20";
+	rename -uid "B175BE77-4A41-B071-5CB6-F8A9B5AC759F";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId21";
+	rename -uid "D0A3C20E-3443-BBA4-2C73-BB85BC428246";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts11";
+	rename -uid "51627763-A24F-63F1-1E42-1CA6A994A968";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId22";
+	rename -uid "23FDCA95-BB42-8324-EF50-2E8035BA03E7";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId23";
+	rename -uid "2E1956FE-514F-4FD6-31BB-7CA0461D107A";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts12";
+	rename -uid "A5E403B6-C141-8EB7-923B-AFA3C1103AD8";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId24";
+	rename -uid "9D39C0C1-2E41-F157-BAB9-7EA3EE88728C";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId25";
+	rename -uid "B7D19334-C648-F635-64B8-C3889D52DADA";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts13";
+	rename -uid "7C349CED-D244-6FBD-9FEF-969D3F724ED2";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:15]";
+createNode groupId -n "Plant:groupId26";
+	rename -uid "B6F81223-BB4F-E5F3-0595-EC856E849D18";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId27";
+	rename -uid "01AA7C5E-B445-4EA6-6359-78B80BCA1352";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts14";
+	rename -uid "A81B05DF-5947-1B8B-BB15-8B8040CD9B3B";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:390]";
+createNode groupId -n "Plant:groupId28";
+	rename -uid "4EC6B385-9A4F-AB78-0BBC-0998E8FD8968";
+	setAttr ".ihi" 0;
+createNode reference -n "PlantRN1";
+	rename -uid "2D8DE0BF-B341-1B48-207C-CCAB79C1015D";
+	setAttr -s 91 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
+	setAttr ".phl[84]" 0;
+	setAttr ".phl[85]" 0;
+	setAttr ".phl[86]" 0;
+	setAttr ".phl[87]" 0;
+	setAttr ".phl[88]" 0;
+	setAttr ".phl[89]" 0;
+	setAttr ".phl[90]" 0;
+	setAttr ".phl[91]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"PlantRN1"
+		"PlantRN1" 0
+		"PlantRN1" 156
+		0 "|Plant1:revolvedSurfaceShape1" "|PlantRN1fosterParent1|Plant:transform26" 
+		"-s -r "
+		0 "|Plant1:loftedSurfaceShape1" "|PlantRN1fosterParent1|Plant:transform25" 
+		"-s -r "
+		0 "|Plant1:pasted__loftedSurfaceShape1" "|PlantRN1fosterParent1|Plant:transform24" 
+		"-s -r "
+		0 "|Plant1:pasted__loftedSurfaceShape2" "|PlantRN1fosterParent1|Plant:transform23" 
+		"-s -r "
+		0 "|Plant1:pasted__loftedSurfaceShape3" "|PlantRN1fosterParent1|Plant:transform22" 
+		"-s -r "
+		0 "|Plant1:pasted__loftedSurfaceShape4" "|PlantRN1fosterParent1|Plant:transform21" 
+		"-s -r "
+		0 "|Plant1:pasted__loftedSurfaceShape5" "|PlantRN1fosterParent1|Plant:transform20" 
+		"-s -r "
+		0 "|Plant1:pasted__loftedSurfaceShape6" "|PlantRN1fosterParent1|Plant:transform19" 
+		"-s -r "
+		0 "|Plant1:pasted__loftedSurfaceShape7" "|PlantRN1fosterParent1|Plant:transform18" 
+		"-s -r "
+		0 "|Plant1:pasted__loftedSurfaceShape8" "|PlantRN1fosterParent1|Plant:transform17" 
+		"-s -r "
+		0 "|Plant1:pasted__loftedSurfaceShape9" "|PlantRN1fosterParent1|Plant:transform16" 
+		"-s -r "
+		0 "|Plant1:pasted__loftedSurfaceShape1" "|PlantRN1fosterParent1|Plant:transform15" 
+		"-s -r "
+		0 "|Plant1:pasted__pasted__loftedSurfaceShape1" "|PlantRN1fosterParent1|Plant:transform14" 
+		"-s -r "
+		0 "|PlantRN1fosterParent1|Plant:transform26" "|Plant1:revolvedSurface1" "-s -r "
+		
+		0 "|PlantRN1fosterParent1|Plant:transform25" "|Plant1:loftedSurface1" "-s -r "
+		
+		0 "|PlantRN1fosterParent1|Plant:transform24" "|Plant1:group|Plant1:pasted__loftedSurface1" 
+		"-s -r "
+		0 "|PlantRN1fosterParent1|Plant:transform23" "|Plant1:group|Plant1:pasted__loftedSurface2" 
+		"-s -r "
+		0 "|PlantRN1fosterParent1|Plant:transform22" "|Plant1:group|Plant1:pasted__loftedSurface3" 
+		"-s -r "
+		0 "|PlantRN1fosterParent1|Plant:transform21" "|Plant1:group|Plant1:pasted__loftedSurface4" 
+		"-s -r "
+		0 "|PlantRN1fosterParent1|Plant:transform20" "|Plant1:group|Plant1:pasted__loftedSurface5" 
+		"-s -r "
+		0 "|PlantRN1fosterParent1|Plant:transform19" "|Plant1:group|Plant1:pasted__loftedSurface6" 
+		"-s -r "
+		0 "|PlantRN1fosterParent1|Plant:transform18" "|Plant1:group|Plant1:pasted__loftedSurface7" 
+		"-s -r "
+		0 "|PlantRN1fosterParent1|Plant:transform17" "|Plant1:group|Plant1:pasted__loftedSurface8" 
+		"-s -r "
+		0 "|PlantRN1fosterParent1|Plant:transform16" "|Plant1:group|Plant1:pasted__loftedSurface9" 
+		"-s -r "
+		0 "|PlantRN1fosterParent1|Plant:transform15" "|Plant1:group1|Plant1:pasted__loftedSurface1" 
+		"-s -r "
+		0 "|PlantRN1fosterParent1|Plant:transform14" "|Plant1:group2|Plant1:pasted__group1|Plant1:pasted__pasted__loftedSurface1" 
+		"-s -r "
+		2 "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:192]\""
+		
+		2 "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1" "intermediateObject" 
+		" 1"
+		2 "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1" "instObjGroups.objectGroups[0].objectGrpCompList" 
+		" -type \"componentList\" 1 \"f[0:15]\""
+		2 "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1" 
+		"intermediateObject" " 1"
+		2 "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		3 "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[1]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[2]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[3]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN1.placeHolderList[4]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN1.placeHolderList[5]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[6]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[7]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[8]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[9]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[10]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN1.placeHolderList[11]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN1.placeHolderList[12]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[13]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[14]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[15]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[16]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[17]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.outMesh" 
+		"PlantRN1.placeHolderList[18]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.worldMatrix" 
+		"PlantRN1.placeHolderList[19]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[20]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[21]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[22]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[23]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[24]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.outMesh" 
+		"PlantRN1.placeHolderList[25]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.worldMatrix" 
+		"PlantRN1.placeHolderList[26]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[27]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[28]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[29]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[30]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[31]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.outMesh" 
+		"PlantRN1.placeHolderList[32]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.worldMatrix" 
+		"PlantRN1.placeHolderList[33]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[34]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[35]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[36]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[37]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[38]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.outMesh" 
+		"PlantRN1.placeHolderList[39]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.worldMatrix" 
+		"PlantRN1.placeHolderList[40]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[41]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[42]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[43]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[44]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[45]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.outMesh" 
+		"PlantRN1.placeHolderList[46]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.worldMatrix" 
+		"PlantRN1.placeHolderList[47]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[48]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[49]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[50]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[51]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[52]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.outMesh" 
+		"PlantRN1.placeHolderList[53]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.worldMatrix" 
+		"PlantRN1.placeHolderList[54]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[55]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[56]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[57]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[58]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[59]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.outMesh" 
+		"PlantRN1.placeHolderList[60]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.worldMatrix" 
+		"PlantRN1.placeHolderList[61]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[62]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[63]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[64]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[65]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[66]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.outMesh" 
+		"PlantRN1.placeHolderList[67]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.worldMatrix" 
+		"PlantRN1.placeHolderList[68]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[69]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[70]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[71]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[72]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[73]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN1.placeHolderList[74]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN1.placeHolderList[75]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[76]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[77]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[78]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[79]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[80]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.outMesh" 
+		"PlantRN1.placeHolderList[81]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.worldMatrix" 
+		"PlantRN1.placeHolderList[82]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[83]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[84]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[85]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[86]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[87]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.outMesh" 
+		"PlantRN1.placeHolderList[88]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.worldMatrix" 
+		"PlantRN1.placeHolderList[89]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[90]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[91]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode polyUnite -n "polyUnite2";
+	rename -uid "EDA02E25-8947-70EB-9BE7-5BAA27CD7CFE";
+	setAttr -s 15 ".ip";
+	setAttr -s 15 ".im";
+createNode groupId -n "Plant:groupId29";
+	rename -uid "25F359FE-634B-DA48-9466-D39ACA890711";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId30";
+	rename -uid "E6BEF88F-024C-1D01-8951-5F967EF5C229";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId31";
+	rename -uid "82B3034C-944A-64C4-AD5A-E0A3AED31746";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId32";
+	rename -uid "24594C1B-1C4B-8B6B-AA10-E9903EF41E7F";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId33";
+	rename -uid "20A19C4C-5949-BB88-F549-07B0D510B5AA";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId34";
+	rename -uid "4CB8894D-024E-90C0-A4C3-B699418BBCC0";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId35";
+	rename -uid "08506BA3-9F41-33EF-A44B-59878FD659E1";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId36";
+	rename -uid "A0B98B4D-2D46-CB83-3CF0-0F83EA5B5CA4";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId37";
+	rename -uid "D9A505B0-5349-6BC8-6858-869B822C63FA";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId38";
+	rename -uid "3127AA64-BC49-FE85-5154-BFB73CED006F";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId39";
+	rename -uid "D189FBF3-D049-DA20-CD11-4F8351F24731";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId40";
+	rename -uid "47FCCED6-FA42-A499-6A48-A7BBB7267780";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId41";
+	rename -uid "430467DA-CA46-1D15-B9DC-E2ACC7E45213";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId42";
+	rename -uid "C4B94A60-7B47-91E4-DF8C-ABB4BBD0D93D";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId43";
+	rename -uid "73567C40-B644-1CD1-4517-A68C7C392A31";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId44";
+	rename -uid "E6DC3C9F-B547-80BD-1000-08AAFD6F31E3";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId45";
+	rename -uid "29ADB37D-9445-FDA2-F04D-EB8CB98BFE93";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId46";
+	rename -uid "1F9DC9D9-F846-A3F3-BEF6-DEB5EBEA814C";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId47";
+	rename -uid "D5DE01B1-054F-5EC4-F1A5-989B37BEA674";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId48";
+	rename -uid "689741F8-F14E-8DA9-F974-3FBC6F7622F1";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId49";
+	rename -uid "B6B0B8E9-574D-B04B-BDEA-A5BB856662BF";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId50";
+	rename -uid "8C632A4F-E140-27B0-74C5-7FAD2ECEFCAC";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId51";
+	rename -uid "60E76D8A-3149-9270-97AC-DF84FCA86338";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId52";
+	rename -uid "0CB13A5B-9C47-D3E0-B424-BFA65B9A55E8";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId53";
+	rename -uid "4231EA29-BC4C-309C-2111-448E4BE7404D";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId54";
+	rename -uid "2AA8E581-2542-B94F-60A6-36BDD8B19C87";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId55";
+	rename -uid "5813C678-BC43-DB08-85D9-C5816251CB1C";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId56";
+	rename -uid "EF58594E-6A44-0FF3-3B70-3A868F19EA7A";
+	setAttr ".ihi" 0;
+createNode groupId -n "Plant:groupId57";
+	rename -uid "659C8FD1-6943-E40B-05AA-6CB5CCD210B7";
+	setAttr ".ihi" 0;
+createNode groupParts -n "Plant:groupParts15";
+	rename -uid "AA1EE32C-E143-37AC-7D88-6A99F0EFBB07";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:528]";
+createNode groupId -n "Plant:groupId58";
+	rename -uid "6E8EAA5E-6F49-ED05-C0BE-A5BD5EA233C9";
+	setAttr ".ihi" 0;
 select -ne :time1;
 	setAttr ".o" 112;
 	setAttr ".unw" 112;
@@ -3301,6 +5382,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
+	setAttr -s 3 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -3308,9 +5390,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.58974361 0.58974361 0.58974361 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 28 ".dsm";
+	setAttr -s 87 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 7 ".gn";
+	setAttr -s 63 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -3331,6 +5413,192 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+connectAttr "PlantRN.phl[110]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId1.id" "PlantRN.phl[111]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[112]";
+connectAttr "PlantRN.phl[113]" "polyUnite1.ip[0]";
+connectAttr "Plant:groupParts1.og" "PlantRN.phl[114]";
+connectAttr "PlantRN.phl[115]" "polyUnite1.im[0]";
+connectAttr "PlantRN.phl[116]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId2.id" "PlantRN.phl[117]";
+connectAttr "PlantRN.phl[118]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId25.id" "PlantRN.phl[119]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[120]";
+connectAttr "PlantRN.phl[121]" "polyUnite1.ip[12]";
+connectAttr "Plant:groupParts13.og" "PlantRN.phl[122]";
+connectAttr "PlantRN.phl[123]" "polyUnite1.im[12]";
+connectAttr "PlantRN.phl[124]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId26.id" "PlantRN.phl[125]";
+connectAttr "PlantRN.phl[126]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId21.id" "PlantRN.phl[127]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[128]";
+connectAttr "PlantRN.phl[129]" "polyUnite1.ip[10]";
+connectAttr "Plant:groupParts11.og" "PlantRN.phl[130]";
+connectAttr "PlantRN.phl[131]" "polyUnite1.im[10]";
+connectAttr "PlantRN.phl[132]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId22.id" "PlantRN.phl[133]";
+connectAttr "PlantRN.phl[134]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId19.id" "PlantRN.phl[135]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[136]";
+connectAttr "PlantRN.phl[137]" "polyUnite1.ip[9]";
+connectAttr "Plant:groupParts10.og" "PlantRN.phl[138]";
+connectAttr "PlantRN.phl[139]" "polyUnite1.im[9]";
+connectAttr "PlantRN.phl[140]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId20.id" "PlantRN.phl[141]";
+connectAttr "PlantRN.phl[142]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId17.id" "PlantRN.phl[143]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[144]";
+connectAttr "PlantRN.phl[145]" "polyUnite1.ip[8]";
+connectAttr "Plant:groupParts9.og" "PlantRN.phl[146]";
+connectAttr "PlantRN.phl[147]" "polyUnite1.im[8]";
+connectAttr "PlantRN.phl[148]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId18.id" "PlantRN.phl[149]";
+connectAttr "PlantRN.phl[150]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId15.id" "PlantRN.phl[151]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[152]";
+connectAttr "PlantRN.phl[153]" "polyUnite1.ip[7]";
+connectAttr "Plant:groupParts8.og" "PlantRN.phl[154]";
+connectAttr "PlantRN.phl[155]" "polyUnite1.im[7]";
+connectAttr "PlantRN.phl[156]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId16.id" "PlantRN.phl[157]";
+connectAttr "PlantRN.phl[158]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId13.id" "PlantRN.phl[159]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[160]";
+connectAttr "PlantRN.phl[161]" "polyUnite1.ip[6]";
+connectAttr "Plant:groupParts7.og" "PlantRN.phl[162]";
+connectAttr "PlantRN.phl[163]" "polyUnite1.im[6]";
+connectAttr "PlantRN.phl[164]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId14.id" "PlantRN.phl[165]";
+connectAttr "PlantRN.phl[166]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId11.id" "PlantRN.phl[167]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[168]";
+connectAttr "PlantRN.phl[169]" "polyUnite1.ip[5]";
+connectAttr "Plant:groupParts6.og" "PlantRN.phl[170]";
+connectAttr "PlantRN.phl[171]" "polyUnite1.im[5]";
+connectAttr "PlantRN.phl[172]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId12.id" "PlantRN.phl[173]";
+connectAttr "PlantRN.phl[174]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId9.id" "PlantRN.phl[175]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[176]";
+connectAttr "PlantRN.phl[177]" "polyUnite1.ip[4]";
+connectAttr "Plant:groupParts5.og" "PlantRN.phl[178]";
+connectAttr "PlantRN.phl[179]" "polyUnite1.im[4]";
+connectAttr "PlantRN.phl[180]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId10.id" "PlantRN.phl[181]";
+connectAttr "PlantRN.phl[182]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId7.id" "PlantRN.phl[183]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[184]";
+connectAttr "PlantRN.phl[185]" "polyUnite1.ip[3]";
+connectAttr "Plant:groupParts4.og" "PlantRN.phl[186]";
+connectAttr "PlantRN.phl[187]" "polyUnite1.im[3]";
+connectAttr "PlantRN.phl[188]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId8.id" "PlantRN.phl[189]";
+connectAttr "PlantRN.phl[190]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId29.id" "PlantRN.phl[191]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[192]";
+connectAttr "PlantRN.phl[193]" "polyUnite2.ip[1]";
+connectAttr "PlantRN.phl[194]" "polyUnite2.im[1]";
+connectAttr "PlantRN.phl[195]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId30.id" "PlantRN.phl[196]";
+connectAttr "PlantRN.phl[197]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId3.id" "PlantRN.phl[198]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[199]";
+connectAttr "PlantRN.phl[200]" "polyUnite1.ip[1]";
+connectAttr "Plant:groupParts2.og" "PlantRN.phl[201]";
+connectAttr "PlantRN.phl[202]" "polyUnite1.im[1]";
+connectAttr "PlantRN.phl[203]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId4.id" "PlantRN.phl[204]";
+connectAttr "PlantRN1.phl[1]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId55.id" "PlantRN1.phl[2]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[3]";
+connectAttr "PlantRN1.phl[4]" "polyUnite2.ip[14]";
+connectAttr "PlantRN1.phl[5]" "polyUnite2.im[14]";
+connectAttr "PlantRN1.phl[6]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId56.id" "PlantRN1.phl[7]";
+connectAttr "PlantRN1.phl[8]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId53.id" "PlantRN1.phl[9]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[10]";
+connectAttr "PlantRN1.phl[11]" "polyUnite2.ip[13]";
+connectAttr "PlantRN1.phl[12]" "polyUnite2.im[13]";
+connectAttr "PlantRN1.phl[13]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId54.id" "PlantRN1.phl[14]";
+connectAttr "PlantRN1.phl[15]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId51.id" "PlantRN1.phl[16]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[17]";
+connectAttr "PlantRN1.phl[18]" "polyUnite2.ip[12]";
+connectAttr "PlantRN1.phl[19]" "polyUnite2.im[12]";
+connectAttr "PlantRN1.phl[20]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId52.id" "PlantRN1.phl[21]";
+connectAttr "PlantRN1.phl[22]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId49.id" "PlantRN1.phl[23]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[24]";
+connectAttr "PlantRN1.phl[25]" "polyUnite2.ip[11]";
+connectAttr "PlantRN1.phl[26]" "polyUnite2.im[11]";
+connectAttr "PlantRN1.phl[27]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId50.id" "PlantRN1.phl[28]";
+connectAttr "PlantRN1.phl[29]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId47.id" "PlantRN1.phl[30]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[31]";
+connectAttr "PlantRN1.phl[32]" "polyUnite2.ip[10]";
+connectAttr "PlantRN1.phl[33]" "polyUnite2.im[10]";
+connectAttr "PlantRN1.phl[34]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId48.id" "PlantRN1.phl[35]";
+connectAttr "PlantRN1.phl[36]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId45.id" "PlantRN1.phl[37]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[38]";
+connectAttr "PlantRN1.phl[39]" "polyUnite2.ip[9]";
+connectAttr "PlantRN1.phl[40]" "polyUnite2.im[9]";
+connectAttr "PlantRN1.phl[41]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId46.id" "PlantRN1.phl[42]";
+connectAttr "PlantRN1.phl[43]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId43.id" "PlantRN1.phl[44]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[45]";
+connectAttr "PlantRN1.phl[46]" "polyUnite2.ip[8]";
+connectAttr "PlantRN1.phl[47]" "polyUnite2.im[8]";
+connectAttr "PlantRN1.phl[48]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId44.id" "PlantRN1.phl[49]";
+connectAttr "PlantRN1.phl[50]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId41.id" "PlantRN1.phl[51]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[52]";
+connectAttr "PlantRN1.phl[53]" "polyUnite2.ip[7]";
+connectAttr "PlantRN1.phl[54]" "polyUnite2.im[7]";
+connectAttr "PlantRN1.phl[55]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId42.id" "PlantRN1.phl[56]";
+connectAttr "PlantRN1.phl[57]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId39.id" "PlantRN1.phl[58]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[59]";
+connectAttr "PlantRN1.phl[60]" "polyUnite2.ip[6]";
+connectAttr "PlantRN1.phl[61]" "polyUnite2.im[6]";
+connectAttr "PlantRN1.phl[62]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId40.id" "PlantRN1.phl[63]";
+connectAttr "PlantRN1.phl[64]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId37.id" "PlantRN1.phl[65]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[66]";
+connectAttr "PlantRN1.phl[67]" "polyUnite2.ip[5]";
+connectAttr "PlantRN1.phl[68]" "polyUnite2.im[5]";
+connectAttr "PlantRN1.phl[69]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId38.id" "PlantRN1.phl[70]";
+connectAttr "PlantRN1.phl[71]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId35.id" "PlantRN1.phl[72]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[73]";
+connectAttr "PlantRN1.phl[74]" "polyUnite2.ip[4]";
+connectAttr "PlantRN1.phl[75]" "polyUnite2.im[4]";
+connectAttr "PlantRN1.phl[76]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId36.id" "PlantRN1.phl[77]";
+connectAttr "PlantRN1.phl[78]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId33.id" "PlantRN1.phl[79]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[80]";
+connectAttr "PlantRN1.phl[81]" "polyUnite2.ip[3]";
+connectAttr "PlantRN1.phl[82]" "polyUnite2.im[3]";
+connectAttr "PlantRN1.phl[83]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId34.id" "PlantRN1.phl[84]";
+connectAttr "PlantRN1.phl[85]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId31.id" "PlantRN1.phl[86]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[87]";
+connectAttr "PlantRN1.phl[88]" "polyUnite2.ip[2]";
+connectAttr "PlantRN1.phl[89]" "polyUnite2.im[2]";
+connectAttr "PlantRN1.phl[90]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId32.id" "PlantRN1.phl[91]";
 connectAttr "FloorLyr.di" "pCube1.do";
 connectAttr "groupId27.id" "ChairmeshShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "ChairmeshShape.iog.og[0].gco";
@@ -3352,6 +5620,21 @@ connectAttr "polyBoolean1.out" "polySurfaceShape1.i";
 connectAttr "groupId30.id" "polySurfaceShape1.iog.og[0].gid";
 connectAttr "groupId32.id" "polySurfaceShape1.iog.og[1].gid";
 connectAttr "groupId34.id" "polySurfaceShape1.ciog.cog[0].cgid";
+connectAttr "Plant:groupParts14.og" "|group1|Plant:revolvedSurface1|Plant:transform28|Plant:revolvedSurface1Shape.i"
+		;
+connectAttr "Plant:groupId27.id" "|group1|Plant:revolvedSurface1|Plant:transform28|Plant:revolvedSurface1Shape.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|group1|Plant:revolvedSurface1|Plant:transform28|Plant:revolvedSurface1Shape.iog.og[0].gco"
+		;
+connectAttr "Plant:groupId28.id" "|group1|Plant:revolvedSurface1|Plant:transform28|Plant:revolvedSurface1Shape.ciog.cog[0].cgid"
+		;
+connectAttr "Plant:groupParts15.og" "Plant:revolvedSurface1ShapeShape.i";
+connectAttr "Plant:groupId57.id" "Plant:revolvedSurface1ShapeShape.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "Plant:revolvedSurface1ShapeShape.iog.og[0].gco"
+		;
+connectAttr "Plant:groupId58.id" "Plant:revolvedSurface1ShapeShape.ciog.cog[0].cgid"
+		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -3376,7 +5659,81 @@ connectAttr "groupParts2.og" "polyBevel1.ip";
 connectAttr "pCube11Shape.wm" "polyBevel1.mp";
 connectAttr "polySurfaceShape2.o" "groupParts2.ig";
 connectAttr "groupId35.id" "groupParts2.gi";
+connectAttr "Plant:groupParts12.og" "PlantRN.phl[9]";
+connectAttr "Plant:groupId23.id" "PlantRN.phl[11]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[12]";
+connectAttr "Plant:groupId24.id" "PlantRN.phl[16]";
+connectAttr "Plant:groupParts3.og" "PlantRN.phl[81]";
+connectAttr "Plant:groupId5.id" "PlantRN.phl[83]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[84]";
+connectAttr "Plant:groupId6.id" "PlantRN.phl[88]";
+connectAttr "PlantRNfosterParent1.msg" "PlantRN.fp";
+connectAttr "PlantRN.phl[105]" "polyConnectComponents1.ip";
+connectAttr "PlantRN.phl[106]" "polyConnectComponents2.ip";
+connectAttr "PlantRN.phl[107]" "polyConnectComponents3.ip";
+connectAttr "Plant:polySurfaceShape1.o" "polyConnectComponents4.ip";
+connectAttr "Plant:polySurfaceShape2.o" "polyConnectComponents5.ip";
+connectAttr "Plant:polySurfaceShape3.o" "polyConnectComponents6.ip";
+connectAttr "Plant:polySurfaceShape4.o" "polyConnectComponents7.ip";
+connectAttr "Plant:polySurfaceShape5.o" "polyConnectComponents8.ip";
+connectAttr "Plant:polySurfaceShape6.o" "polyConnectComponents9.ip";
+connectAttr "Plant:polySurfaceShape7.o" "polyConnectComponents10.ip";
+connectAttr "Plant:polySurfaceShape8.o" "polyConnectComponents11.ip";
+connectAttr "PlantRN.phl[108]" "polyConnectComponents12.ip";
+connectAttr "PlantRN.phl[109]" "polyConnectComponents13.ip";
+connectAttr "polyConnectComponents2.out" "transformGeometry1.ig";
+connectAttr "polyConnectComponents4.out" "transformGeometry2.ig";
+connectAttr "polyConnectComponents5.out" "transformGeometry3.ig";
+connectAttr "polyConnectComponents6.out" "transformGeometry4.ig";
+connectAttr "polyConnectComponents7.out" "transformGeometry5.ig";
+connectAttr "polyConnectComponents8.out" "transformGeometry6.ig";
+connectAttr "polyConnectComponents9.out" "transformGeometry7.ig";
+connectAttr "polyConnectComponents10.out" "transformGeometry8.ig";
+connectAttr "polyConnectComponents11.out" "transformGeometry9.ig";
+connectAttr "PlantRN.phl[85]" "polyUnite1.ip[2]";
+connectAttr "PlantRN.phl[13]" "polyUnite1.ip[11]";
+connectAttr "PlantRN.phl[86]" "polyUnite1.im[2]";
+connectAttr "PlantRN.phl[14]" "polyUnite1.im[11]";
+connectAttr "polyConnectComponents1.out" "Plant:groupParts1.ig";
+connectAttr "Plant:groupId1.id" "Plant:groupParts1.gi";
+connectAttr "transformGeometry1.og" "Plant:groupParts2.ig";
+connectAttr "Plant:groupId3.id" "Plant:groupParts2.gi";
+connectAttr "polyConnectComponents3.out" "Plant:groupParts3.ig";
+connectAttr "Plant:groupId5.id" "Plant:groupParts3.gi";
+connectAttr "transformGeometry2.og" "Plant:groupParts4.ig";
+connectAttr "Plant:groupId7.id" "Plant:groupParts4.gi";
+connectAttr "transformGeometry3.og" "Plant:groupParts5.ig";
+connectAttr "Plant:groupId9.id" "Plant:groupParts5.gi";
+connectAttr "transformGeometry4.og" "Plant:groupParts6.ig";
+connectAttr "Plant:groupId11.id" "Plant:groupParts6.gi";
+connectAttr "transformGeometry5.og" "Plant:groupParts7.ig";
+connectAttr "Plant:groupId13.id" "Plant:groupParts7.gi";
+connectAttr "transformGeometry6.og" "Plant:groupParts8.ig";
+connectAttr "Plant:groupId15.id" "Plant:groupParts8.gi";
+connectAttr "transformGeometry7.og" "Plant:groupParts9.ig";
+connectAttr "Plant:groupId17.id" "Plant:groupParts9.gi";
+connectAttr "transformGeometry8.og" "Plant:groupParts10.ig";
+connectAttr "Plant:groupId19.id" "Plant:groupParts10.gi";
+connectAttr "transformGeometry9.og" "Plant:groupParts11.ig";
+connectAttr "Plant:groupId21.id" "Plant:groupParts11.gi";
+connectAttr "polyConnectComponents12.out" "Plant:groupParts12.ig";
+connectAttr "Plant:groupId23.id" "Plant:groupParts12.gi";
+connectAttr "polyConnectComponents13.out" "Plant:groupParts13.ig";
+connectAttr "Plant:groupId25.id" "Plant:groupParts13.gi";
+connectAttr "polyUnite1.out" "Plant:groupParts14.ig";
+connectAttr "Plant:groupId27.id" "Plant:groupParts14.gi";
+connectAttr "PlantRN1fosterParent1.msg" "PlantRN1.fp";
+connectAttr "|group1|Plant:revolvedSurface1|Plant:transform28|Plant:revolvedSurface1Shape.o" "polyUnite2.ip[0]"
+		;
+connectAttr "|group1|Plant:revolvedSurface1|Plant:transform28|Plant:revolvedSurface1Shape.wm" "polyUnite2.im[0]"
+		;
+connectAttr "polyUnite2.out" "Plant:groupParts15.ig";
+connectAttr "Plant:groupId57.id" "Plant:groupParts15.gi";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "PlantRN.phl[10]" ":initialShadingGroup.dsm" -na;
+connectAttr "PlantRN.phl[15]" ":initialShadingGroup.dsm" -na;
+connectAttr "PlantRN.phl[82]" ":initialShadingGroup.dsm" -na;
+connectAttr "PlantRN.phl[87]" ":initialShadingGroup.dsm" -na;
 connectAttr "FloorMesh.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|pCube3|Chairmesh.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "WallShape1.iog" ":initialShadingGroup.dsm" -na;
@@ -3405,6 +5762,14 @@ connectAttr "polySurfaceShape1.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "polySurfaceShape1.iog.og[1]" ":initialShadingGroup.dsm" -na;
 connectAttr "polySurfaceShape1.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pCube11Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "|group1|Plant:revolvedSurface1|Plant:transform28|Plant:revolvedSurface1Shape.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|group1|Plant:revolvedSurface1|Plant:transform28|Plant:revolvedSurface1Shape.ciog.cog[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "Plant:revolvedSurface1ShapeShape.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "Plant:revolvedSurface1ShapeShape.ciog.cog[0]" ":initialShadingGroup.dsm"
+		 -na;
 connectAttr "groupId27.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId28.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId30.msg" ":initialShadingGroup.gn" -na;
@@ -3412,4 +5777,60 @@ connectAttr "groupId31.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId32.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId33.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId35.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId1.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId2.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId3.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId4.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId5.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId6.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId7.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId8.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId9.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId10.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId11.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId12.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId13.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId14.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId15.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId16.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId17.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId18.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId19.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId20.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId21.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId22.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId23.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId24.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId25.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId26.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId27.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId29.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId30.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId31.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId32.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId33.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId34.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId35.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId36.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId37.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId38.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId39.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId40.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId41.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId42.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId43.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId44.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId45.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId46.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId47.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId48.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId49.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId50.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId51.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId52.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId53.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId54.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId55.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId56.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Plant:groupId57.msg" ":initialShadingGroup.gn" -na;
 // End of RoomSceneTeagan.ma
