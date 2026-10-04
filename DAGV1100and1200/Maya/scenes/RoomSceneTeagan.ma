@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: RoomSceneTeagan.ma
-//Last modified: Sun, Sep 20, 2026 09:42:34 PM
+//Last modified: Sun, Sep 27, 2026 09:22:41 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Plant" -rfn "PlantRN" -op "v=0;" -typ "mayaAscii" "/Users/teaganescobar/Gitrepos/Essentials/DAGV1100and1200/Maya//scenes/Plant.ma";
 file -rdi 1 -ns "Plant1" -rfn "PlantRN1" -op "v=0;" -typ "mayaAscii" "/Users/teaganescobar/Gitrepos/Essentials/DAGV1100and1200/Maya//scenes/Plant.ma";
@@ -17,19 +17,19 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202606171832-bee0ff2c7e";
 fileInfo "osv" "Mac OS X 20.6.2";
-fileInfo "UUID" "69B06C81-884A-FFD6-E8BB-03B07ADFFE81";
+fileInfo "UUID" "73643EB2-0F46-7367-B465-64BFACD7A8B8";
 createNode transform -s -n "persp";
 	rename -uid "DA5E94C3-F146-89A2-ADA8-F2B2FC642D96";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 14.207535079237314 25.471141309223025 40.511507192366345 ;
-	setAttr ".r" -type "double3" -28.800000000000008 21.200000000000021 0 ;
+	setAttr ".t" -type "double3" 42.461874656644014 12.093502330657232 17.622945862252337 ;
+	setAttr ".r" -type "double3" -5.9999999999979519 65.199999999999463 9.4783016182532871e-16 ;
 	setAttr ".rp" -type "double3" -8.8817841970012523e-16 0 3.5527136788005009e-15 ;
 	setAttr ".rpt" -type "double3" 4.5445919081754267e-15 3.0281267107760288e-16 -2.8996332563057229e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "70C7BA89-6942-DCA9-6455-B39590E6742C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 47.202782364972812;
+	setAttr ".coi" 47.202782364974631;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4466,7 +4466,7 @@ createNode mesh -n "revolvedSurfaceShape3" -p "revolvedSurface3";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 35 ".pt";
+	setAttr -s 32 ".pt";
 	setAttr ".pt[18]" -type "float3" 1.343933e-17 -0.39179188 0.11372466 ;
 	setAttr ".pt[19]" -type "float3" -0.043470427 -0.39179188 0.10494688 ;
 	setAttr ".pt[20]" -type "float3" -0.08041548 -0.39179188 0.08041548 ;
@@ -4839,7 +4839,7 @@ createNode mesh -n "revolvedSurfaceShape3" -p "revolvedSurface3";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "PlantRNfosterParent1";
-	rename -uid "0EAE0C8F-0A45-BEB8-02CA-DFBD0307ECB9";
+	rename -uid "7A6F75C9-B04B-39F4-FD1B-07978B76FDAB";
 createNode transform -n "Plant:transform1" -p "PlantRNfosterParent1";
 	rename -uid "50A3D5F3-E841-C4F5-1C32-668C2512A593";
 	setAttr ".v" no;
@@ -5416,7 +5416,7 @@ createNode transform -n "Plant:transform12" -p "PlantRNfosterParent1";
 	rename -uid "EB2FA76C-6B4E-A87B-160F-0B89A1299BBA";
 	setAttr ".v" no;
 createNode fosterParent -n "PlantRN1fosterParent1";
-	rename -uid "A53FDB09-1E4E-439A-720C-C6A98DD8746D";
+	rename -uid "7AA7614D-8841-04D7-45DB-BDADAF1A9B97";
 createNode transform -n "Plant:transform26" -p "PlantRN1fosterParent1";
 	rename -uid "873230BB-8F48-2409-FE98-71B9F636936D";
 	setAttr ".v" no;
@@ -5469,15 +5469,15 @@ createNode UsdDefaultSettings -n "UsdDefaultRenderSettings1";
 	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
 lockNode -l 1 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "09269183-D94A-CDD4-9482-A9820DC79604";
+	rename -uid "7AF8D27D-8046-9E9F-63BE-2AA6FDEDFEC3";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "FF67A3A4-A34A-AEE5-43D6-8A8F65D66202";
+	rename -uid "12B1842A-2D45-A12F-0D0F-03934933907A";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "4EA998C6-6848-422D-CA64-789285D8CA97";
+	rename -uid "D4C4B022-2545-E26E-B9D4-94B08C0A3251";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "5EEDC3B6-7544-25DA-E85B-82A50E3E9B56";
+	rename -uid "1FE493BD-B444-6C78-5A1D-D4A2C752B381";
 	setAttr ".cdl" 2;
 	setAttr -s 3 ".dli";
 	setAttr ".dli[2]" 1;
@@ -5486,7 +5486,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "6DC4C3E8-1E4D-7283-3422-8FB108D0EB9E";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "3E99F451-FF4A-451F-CDCF-D59203EB14F3";
+	rename -uid "87605516-9E45-714C-51B9-6D85EA68DA4C";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5B4DA3DD-6F4A-3B67-2923-789CDBBB268A";
 	setAttr ".g" yes;
@@ -5640,93 +5640,10 @@ createNode reference -n "PlantRN";
 	setAttr ".phl[107]" 0;
 	setAttr ".phl[108]" 0;
 	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
-	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
-	setAttr ".phl[132]" 0;
-	setAttr ".phl[133]" 0;
-	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
-	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
-	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
-	setAttr ".phl[157]" 0;
-	setAttr ".phl[158]" 0;
-	setAttr ".phl[159]" 0;
-	setAttr ".phl[160]" 0;
-	setAttr ".phl[161]" 0;
-	setAttr ".phl[162]" 0;
-	setAttr ".phl[163]" 0;
-	setAttr ".phl[164]" 0;
-	setAttr ".phl[165]" 0;
-	setAttr ".phl[166]" 0;
-	setAttr ".phl[167]" 0;
-	setAttr ".phl[168]" 0;
-	setAttr ".phl[169]" 0;
-	setAttr ".phl[170]" 0;
-	setAttr ".phl[171]" 0;
-	setAttr ".phl[172]" 0;
-	setAttr ".phl[173]" 0;
-	setAttr ".phl[174]" 0;
-	setAttr ".phl[175]" 0;
-	setAttr ".phl[176]" 0;
-	setAttr ".phl[177]" 0;
-	setAttr ".phl[178]" 0;
-	setAttr ".phl[179]" 0;
-	setAttr ".phl[180]" 0;
-	setAttr ".phl[181]" 0;
-	setAttr ".phl[182]" 0;
-	setAttr ".phl[183]" 0;
-	setAttr ".phl[184]" 0;
-	setAttr ".phl[185]" 0;
-	setAttr ".phl[186]" 0;
-	setAttr ".phl[187]" 0;
-	setAttr ".phl[188]" 0;
-	setAttr ".phl[189]" 0;
 	setAttr ".phl[190]" 0;
-	setAttr ".phl[191]" 0;
-	setAttr ".phl[192]" 0;
 	setAttr ".phl[193]" 0;
 	setAttr ".phl[194]" 0;
 	setAttr ".phl[195]" 0;
-	setAttr ".phl[196]" 0;
 	setAttr ".phl[197]" 0;
 	setAttr ".phl[198]" 0;
 	setAttr ".phl[199]" 0;
@@ -5735,9 +5652,89 @@ createNode reference -n "PlantRN";
 	setAttr ".phl[202]" 0;
 	setAttr ".phl[203]" 0;
 	setAttr ".phl[204]" 0;
+	setAttr ".phl[205]" 0;
+	setAttr ".phl[206]" 0;
+	setAttr ".phl[207]" 0;
+	setAttr ".phl[208]" 0;
+	setAttr ".phl[209]" 0;
+	setAttr ".phl[210]" 0;
+	setAttr ".phl[211]" 0;
+	setAttr ".phl[212]" 0;
+	setAttr ".phl[213]" 0;
+	setAttr ".phl[214]" 0;
+	setAttr ".phl[215]" 0;
+	setAttr ".phl[216]" 0;
+	setAttr ".phl[217]" 0;
+	setAttr ".phl[218]" 0;
+	setAttr ".phl[219]" 0;
+	setAttr ".phl[220]" 0;
+	setAttr ".phl[221]" 0;
+	setAttr ".phl[222]" 0;
+	setAttr ".phl[223]" 0;
+	setAttr ".phl[224]" 0;
+	setAttr ".phl[225]" 0;
+	setAttr ".phl[226]" 0;
+	setAttr ".phl[227]" 0;
+	setAttr ".phl[228]" 0;
+	setAttr ".phl[229]" 0;
+	setAttr ".phl[230]" 0;
+	setAttr ".phl[231]" 0;
+	setAttr ".phl[232]" 0;
+	setAttr ".phl[233]" 0;
+	setAttr ".phl[234]" 0;
+	setAttr ".phl[235]" 0;
+	setAttr ".phl[236]" 0;
+	setAttr ".phl[237]" 0;
+	setAttr ".phl[238]" 0;
+	setAttr ".phl[239]" 0;
+	setAttr ".phl[240]" 0;
+	setAttr ".phl[241]" 0;
+	setAttr ".phl[242]" 0;
+	setAttr ".phl[243]" 0;
+	setAttr ".phl[244]" 0;
+	setAttr ".phl[245]" 0;
+	setAttr ".phl[246]" 0;
+	setAttr ".phl[247]" 0;
+	setAttr ".phl[248]" 0;
+	setAttr ".phl[249]" 0;
+	setAttr ".phl[250]" 0;
+	setAttr ".phl[251]" 0;
+	setAttr ".phl[252]" 0;
+	setAttr ".phl[253]" 0;
+	setAttr ".phl[254]" 0;
+	setAttr ".phl[255]" 0;
+	setAttr ".phl[256]" 0;
+	setAttr ".phl[257]" 0;
+	setAttr ".phl[258]" 0;
+	setAttr ".phl[259]" 0;
+	setAttr ".phl[260]" 0;
+	setAttr ".phl[261]" 0;
+	setAttr ".phl[262]" 0;
+	setAttr ".phl[263]" 0;
+	setAttr ".phl[264]" 0;
+	setAttr ".phl[265]" 0;
+	setAttr ".phl[266]" 0;
+	setAttr ".phl[267]" 0;
+	setAttr ".phl[268]" 0;
+	setAttr ".phl[269]" 0;
+	setAttr ".phl[270]" 0;
+	setAttr ".phl[271]" 0;
+	setAttr ".phl[272]" 0;
+	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
+	setAttr ".phl[279]" 0;
+	setAttr ".phl[280]" 0;
+	setAttr ".phl[281]" 0;
+	setAttr ".phl[282]" 0;
+	setAttr ".phl[283]" 0;
+	setAttr ".phl[284]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PlantRN"
-		"PlantRN" 34
+		"PlantRN" 45
 		0 "|Plant:curve1" "|group1" "-s -r "
 		0 "|Plant:curve2" "|group1" "-s -r "
 		0 "|Plant:curve3" "|group1" "-s -r "
@@ -5746,6 +5743,13 @@ createNode reference -n "PlantRN";
 		"-s -r "
 		0 "|Plant:pasted__loftedSurfaceShape1" "|PlantRNfosterParent1|Plant:transform2" 
 		"-s -r "
+		0 "|Plant:pasted__loftedSurfaceShape1" "|PlantRNfosterParent1|Plant:transform27" 
+		"-s -r "
+		2 "|group2|group1|Plant:group1|Plant:pasted__loftedSurface1|Plant:pasted__loftedSurfaceShape1" 
+		"intermediateObject" " 1"
+		2 "|group2|group1|Plant:group1|Plant:pasted__loftedSurface1|Plant:pasted__loftedSurfaceShape1" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
 		3 "Plant:pasted__nurbsTessellate3.outputPolygon" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.inMesh" 
 		""
 		3 "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.instObjGroups" 
@@ -5760,6 +5764,8 @@ createNode reference -n "PlantRN";
 		""
 		3 "Plant:pasted__pasted__nurbsTessellate3.outputPolygon" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.inMesh" 
 		""
+		3 "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.inMesh" 
 		"PlantRN.placeHolderList[9]" ""
 		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform2|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1]" 
@@ -5802,16 +5808,27 @@ createNode reference -n "PlantRN";
 		"|Plant:pasted__loftedSurfaceShape1.i"
 		5 3 "PlantRN" "Plant:pasted__pasted__nurbsTessellate3.outputPolygon" 
 		"PlantRN.placeHolderList[109]" "Plant:pasted__pasted__loftedSurfaceShape1.i"
-		"PlantRN" 249
-		0 "|Plant:revolvedSurface1" "|group2" "-s -r "
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
+		"PlantRN.placeHolderList[190]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN.placeHolderList[191]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN.placeHolderList[192]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN.placeHolderList[193]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN.placeHolderList[194]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN.placeHolderList[195]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN.placeHolderList[196]" ""
+		"PlantRN" 242
 		0 "|Plant:revolvedSurfaceShape1" "|group2|group1|Plant:revolvedSurface1|Plant:transform13" 
 		"-s -r "
 		0 "|Plant:loftedSurface1" "|group2|group1" "-s -r "
 		0 "|Plant:loftedSurfaceShape1" "|PlantRNfosterParent1|Plant:transform12" 
 		"-s -r "
 		0 "|Plant:group" "|group2|group1" "-s -r "
-		0 "|Plant:pasted__loftedSurfaceShape1" "|PlantRNfosterParent1|Plant:transform27" 
-		"-s -r "
 		0 "|Plant:pasted__loftedSurfaceShape2" "|PlantRNfosterParent1|Plant:transform10" 
 		"-s -r "
 		0 "|Plant:pasted__loftedSurfaceShape3" "|PlantRNfosterParent1|Plant:transform9" 
@@ -5832,6 +5849,7 @@ createNode reference -n "PlantRN";
 		0 "|Plant:group2" "|group2|group1" "-s -r "
 		0 "|Plant:pasted__pasted__loftedSurfaceShape1" "|PlantRNfosterParent1|Plant:transform1" 
 		"-s -r "
+		0 "|Plant:revolvedSurface1" "|group2" "-s -r "
 		0 "|PlantRNfosterParent1|Plant:transform12" "|group2|group1|Plant:loftedSurface1" 
 		"-s -r "
 		0 "|PlantRNfosterParent1|Plant:transform11" "|group2|group1|Plant:group|Plant:pasted__loftedSurface1" 
@@ -5906,18 +5924,19 @@ createNode reference -n "PlantRN";
 		" -s 2"
 		2 "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1" "uvSet[0].uvSetName" 
 		" -type \"string\" \"map1\""
+		2 "|group2|group1|Plant:group|Plant:pasted__loftedSurface1" "translate" " -type \"double3\" -8.09568568867189065 -5.08970787709162131 -4.53424135482338109"
+		
+		2 "|group2|group1|Plant:group|Plant:pasted__loftedSurface1" "rotate" " -type \"double3\" 58.38512127025715159 49.76290048435599545 14.45896268613470959"
+		
 		2 "|group2|group1|Plant:group|Plant:pasted__loftedSurface1" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|group2|group1|Plant:group|Plant:pasted__loftedSurface1" "rotatePivot" 
 		" -type \"double3\" -0.39244864881038666 10.18406963348388672 -3.77795243263244629"
 		
+		2 "|group2|group1|Plant:group|Plant:pasted__loftedSurface1" "rotatePivotTranslate" 
+		" -type \"double3\" 0 0 0"
 		2 "|group2|group1|Plant:group|Plant:pasted__loftedSurface1" "scalePivot" 
 		" -type \"double3\" -0.39244864881038666 10.18406963348388672 -3.77795243263244629"
-		
-		2 "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1" 
-		"intermediateObject" " 1"
-		2 "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
 		
 		2 "|group2|group1|Plant:group|Plant:pasted__loftedSurface2" "rotate" " -type \"double3\" 0 0 0"
 		
@@ -6082,6 +6101,9 @@ createNode reference -n "PlantRN";
 		2 "|group2|group1|Plant:group1|Plant:pasted__loftedSurface1|Plant:pasted__loftedSurfaceShape1" 
 		"intermediateObject" " 1"
 		2 "|group2|group1|Plant:group1|Plant:pasted__loftedSurface1|Plant:pasted__loftedSurfaceShape1" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|group2|group1|Plant:group1|Plant:pasted__loftedSurface1|Plant:pasted__loftedSurfaceShape1" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|group2|group1|Plant:group2|Plant:pasted__group1|Plant:pasted__pasted__loftedSurface1" 
 		"scale" " -type \"double3\" 1 1 1"
@@ -6097,220 +6119,204 @@ createNode reference -n "PlantRN";
 		"instObjGroups.objectGroups" " -s 2"
 		2 "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		3 "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups" 
+		3 "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups" 
+		3 "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.instObjGroups.objectGroups[1]" 
-		"PlantRN.placeHolderList[110]" ""
-		5 4 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
-		"PlantRN.placeHolderList[111]" ""
-		5 4 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
-		"PlantRN.placeHolderList[112]" ""
-		5 3 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.outMesh" 
-		"PlantRN.placeHolderList[113]" ""
-		5 4 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.inMesh" 
-		"PlantRN.placeHolderList[114]" ""
-		5 3 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.worldMatrix" 
-		"PlantRN.placeHolderList[115]" ""
-		5 3 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[1]" 
-		"PlantRN.placeHolderList[116]" ""
-		5 4 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"PlantRN.placeHolderList[117]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1]" 
-		"PlantRN.placeHolderList[118]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
-		"PlantRN.placeHolderList[119]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
-		"PlantRN.placeHolderList[120]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.outMesh" 
-		"PlantRN.placeHolderList[121]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.inMesh" 
-		"PlantRN.placeHolderList[122]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.worldMatrix" 
-		"PlantRN.placeHolderList[123]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1]" 
-		"PlantRN.placeHolderList[124]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"PlantRN.placeHolderList[125]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[1]" 
-		"PlantRN.placeHolderList[126]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[1].objectGroupId" 
-		"PlantRN.placeHolderList[127]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[1].objectGrpColor" 
-		"PlantRN.placeHolderList[128]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.outMesh" 
-		"PlantRN.placeHolderList[129]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.inMesh" 
-		"PlantRN.placeHolderList[130]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.worldMatrix" 
-		"PlantRN.placeHolderList[131]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[1]" 
-		"PlantRN.placeHolderList[132]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"PlantRN.placeHolderList[133]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[1]" 
-		"PlantRN.placeHolderList[134]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
-		"PlantRN.placeHolderList[135]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
-		"PlantRN.placeHolderList[136]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.outMesh" 
-		"PlantRN.placeHolderList[137]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.inMesh" 
-		"PlantRN.placeHolderList[138]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.worldMatrix" 
-		"PlantRN.placeHolderList[139]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[1]" 
-		"PlantRN.placeHolderList[140]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"PlantRN.placeHolderList[141]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[1]" 
-		"PlantRN.placeHolderList[142]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[1].objectGroupId" 
-		"PlantRN.placeHolderList[143]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[1].objectGrpColor" 
-		"PlantRN.placeHolderList[144]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.outMesh" 
-		"PlantRN.placeHolderList[145]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.inMesh" 
-		"PlantRN.placeHolderList[146]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.worldMatrix" 
-		"PlantRN.placeHolderList[147]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[1]" 
-		"PlantRN.placeHolderList[148]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"PlantRN.placeHolderList[149]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[1]" 
-		"PlantRN.placeHolderList[150]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[1].objectGroupId" 
-		"PlantRN.placeHolderList[151]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[1].objectGrpColor" 
-		"PlantRN.placeHolderList[152]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.outMesh" 
-		"PlantRN.placeHolderList[153]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.inMesh" 
-		"PlantRN.placeHolderList[154]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.worldMatrix" 
-		"PlantRN.placeHolderList[155]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[1]" 
-		"PlantRN.placeHolderList[156]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"PlantRN.placeHolderList[157]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[1]" 
-		"PlantRN.placeHolderList[158]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[1].objectGroupId" 
-		"PlantRN.placeHolderList[159]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[1].objectGrpColor" 
-		"PlantRN.placeHolderList[160]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.outMesh" 
-		"PlantRN.placeHolderList[161]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.inMesh" 
-		"PlantRN.placeHolderList[162]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.worldMatrix" 
-		"PlantRN.placeHolderList[163]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[1]" 
-		"PlantRN.placeHolderList[164]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"PlantRN.placeHolderList[165]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[1]" 
-		"PlantRN.placeHolderList[166]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[1].objectGroupId" 
-		"PlantRN.placeHolderList[167]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[1].objectGrpColor" 
-		"PlantRN.placeHolderList[168]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.outMesh" 
-		"PlantRN.placeHolderList[169]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.inMesh" 
-		"PlantRN.placeHolderList[170]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.worldMatrix" 
-		"PlantRN.placeHolderList[171]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[1]" 
-		"PlantRN.placeHolderList[172]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"PlantRN.placeHolderList[173]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[1]" 
-		"PlantRN.placeHolderList[174]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[1].objectGroupId" 
-		"PlantRN.placeHolderList[175]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[1].objectGrpColor" 
-		"PlantRN.placeHolderList[176]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.outMesh" 
-		"PlantRN.placeHolderList[177]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.inMesh" 
-		"PlantRN.placeHolderList[178]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.worldMatrix" 
-		"PlantRN.placeHolderList[179]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[1]" 
-		"PlantRN.placeHolderList[180]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"PlantRN.placeHolderList[181]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[1]" 
-		"PlantRN.placeHolderList[182]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[1].objectGroupId" 
-		"PlantRN.placeHolderList[183]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[1].objectGrpColor" 
-		"PlantRN.placeHolderList[184]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.outMesh" 
-		"PlantRN.placeHolderList[185]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.inMesh" 
-		"PlantRN.placeHolderList[186]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.worldMatrix" 
-		"PlantRN.placeHolderList[187]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[1]" 
-		"PlantRN.placeHolderList[188]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"PlantRN.placeHolderList[189]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
-		"PlantRN.placeHolderList[190]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN.placeHolderList[191]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN.placeHolderList[192]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.outMesh" 
-		"PlantRN.placeHolderList[193]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.worldMatrix" 
-		"PlantRN.placeHolderList[194]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN.placeHolderList[195]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform27|Plant:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN.placeHolderList[196]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups.objectGroups[1]" 
 		"PlantRN.placeHolderList[197]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
+		5 4 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
 		"PlantRN.placeHolderList[198]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		5 4 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
 		"PlantRN.placeHolderList[199]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.outMesh" 
+		5 3 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.outMesh" 
 		"PlantRN.placeHolderList[200]" ""
-		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.inMesh" 
+		5 4 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.inMesh" 
 		"PlantRN.placeHolderList[201]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.worldMatrix" 
+		5 3 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.worldMatrix" 
 		"PlantRN.placeHolderList[202]" ""
-		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1]" 
+		5 3 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[1]" 
 		"PlantRN.placeHolderList[203]" ""
+		5 4 "PlantRN" "|group2|group1|Plant:revolvedSurface1|Plant:transform13|Plant:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[204]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[205]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[206]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[207]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN.placeHolderList[208]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.inMesh" 
+		"PlantRN.placeHolderList[209]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN.placeHolderList[210]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[211]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform1|Plant:pasted__pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[212]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[213]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[214]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[215]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.outMesh" 
+		"PlantRN.placeHolderList[216]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.inMesh" 
+		"PlantRN.placeHolderList[217]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.worldMatrix" 
+		"PlantRN.placeHolderList[218]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[219]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform3|Plant:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[220]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[221]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[222]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[223]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.outMesh" 
+		"PlantRN.placeHolderList[224]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.inMesh" 
+		"PlantRN.placeHolderList[225]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.worldMatrix" 
+		"PlantRN.placeHolderList[226]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[227]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform4|Plant:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[228]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[229]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[230]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[231]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.outMesh" 
+		"PlantRN.placeHolderList[232]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.inMesh" 
+		"PlantRN.placeHolderList[233]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.worldMatrix" 
+		"PlantRN.placeHolderList[234]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[235]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform5|Plant:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[236]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[237]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[238]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[239]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.outMesh" 
+		"PlantRN.placeHolderList[240]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.inMesh" 
+		"PlantRN.placeHolderList[241]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.worldMatrix" 
+		"PlantRN.placeHolderList[242]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[243]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform6|Plant:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[244]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[245]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[246]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[247]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.outMesh" 
+		"PlantRN.placeHolderList[248]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.inMesh" 
+		"PlantRN.placeHolderList[249]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.worldMatrix" 
+		"PlantRN.placeHolderList[250]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[251]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform7|Plant:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[252]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[253]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[254]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[255]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.outMesh" 
+		"PlantRN.placeHolderList[256]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.inMesh" 
+		"PlantRN.placeHolderList[257]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.worldMatrix" 
+		"PlantRN.placeHolderList[258]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[259]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform8|Plant:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[260]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[261]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[262]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[263]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.outMesh" 
+		"PlantRN.placeHolderList[264]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.inMesh" 
+		"PlantRN.placeHolderList[265]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.worldMatrix" 
+		"PlantRN.placeHolderList[266]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[267]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform9|Plant:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[268]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[269]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[270]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[271]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.outMesh" 
+		"PlantRN.placeHolderList[272]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.inMesh" 
+		"PlantRN.placeHolderList[273]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.worldMatrix" 
+		"PlantRN.placeHolderList[274]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[275]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform10|Plant:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		"PlantRN.placeHolderList[276]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups.objectGroups[1]" 
+		"PlantRN.placeHolderList[277]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
+		"PlantRN.placeHolderList[278]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		"PlantRN.placeHolderList[279]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.outMesh" 
+		"PlantRN.placeHolderList[280]" ""
+		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.inMesh" 
+		"PlantRN.placeHolderList[281]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.worldMatrix" 
+		"PlantRN.placeHolderList[282]" ""
+		5 3 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1]" 
+		"PlantRN.placeHolderList[283]" ""
 		5 4 "PlantRN" "|PlantRNfosterParent1|Plant:transform12|Plant:loftedSurfaceShape1.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		"PlantRN.placeHolderList[204]" "";
+		"PlantRN.placeHolderList[284]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyConnectComponents -n "polyConnectComponents1";
@@ -6534,90 +6540,14 @@ createNode groupId -n "Plant:groupId28";
 createNode reference -n "PlantRN1";
 	rename -uid "2D8DE0BF-B341-1B48-207C-CCAB79C1015D";
 	setAttr -s 91 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
-	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
 	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
 	setAttr ".phl[74]" 0;
 	setAttr ".phl[75]" 0;
 	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
 	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
 	setAttr ".phl[81]" 0;
 	setAttr ".phl[82]" 0;
 	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
 	setAttr ".phl[85]" 0;
 	setAttr ".phl[86]" 0;
 	setAttr ".phl[87]" 0;
@@ -6625,19 +6555,131 @@ createNode reference -n "PlantRN1";
 	setAttr ".phl[89]" 0;
 	setAttr ".phl[90]" 0;
 	setAttr ".phl[91]" 0;
+	setAttr ".phl[92]" 0;
+	setAttr ".phl[93]" 0;
+	setAttr ".phl[94]" 0;
+	setAttr ".phl[95]" 0;
+	setAttr ".phl[96]" 0;
+	setAttr ".phl[97]" 0;
+	setAttr ".phl[98]" 0;
+	setAttr ".phl[99]" 0;
+	setAttr ".phl[100]" 0;
+	setAttr ".phl[101]" 0;
+	setAttr ".phl[102]" 0;
+	setAttr ".phl[103]" 0;
+	setAttr ".phl[104]" 0;
+	setAttr ".phl[105]" 0;
+	setAttr ".phl[106]" 0;
+	setAttr ".phl[107]" 0;
+	setAttr ".phl[108]" 0;
+	setAttr ".phl[109]" 0;
+	setAttr ".phl[110]" 0;
+	setAttr ".phl[111]" 0;
+	setAttr ".phl[112]" 0;
+	setAttr ".phl[113]" 0;
+	setAttr ".phl[114]" 0;
+	setAttr ".phl[115]" 0;
+	setAttr ".phl[116]" 0;
+	setAttr ".phl[117]" 0;
+	setAttr ".phl[118]" 0;
+	setAttr ".phl[119]" 0;
+	setAttr ".phl[120]" 0;
+	setAttr ".phl[121]" 0;
+	setAttr ".phl[122]" 0;
+	setAttr ".phl[123]" 0;
+	setAttr ".phl[124]" 0;
+	setAttr ".phl[125]" 0;
+	setAttr ".phl[126]" 0;
+	setAttr ".phl[127]" 0;
+	setAttr ".phl[128]" 0;
+	setAttr ".phl[129]" 0;
+	setAttr ".phl[130]" 0;
+	setAttr ".phl[131]" 0;
+	setAttr ".phl[132]" 0;
+	setAttr ".phl[133]" 0;
+	setAttr ".phl[134]" 0;
+	setAttr ".phl[135]" 0;
+	setAttr ".phl[136]" 0;
+	setAttr ".phl[137]" 0;
+	setAttr ".phl[138]" 0;
+	setAttr ".phl[139]" 0;
+	setAttr ".phl[140]" 0;
+	setAttr ".phl[141]" 0;
+	setAttr ".phl[142]" 0;
+	setAttr ".phl[143]" 0;
+	setAttr ".phl[144]" 0;
+	setAttr ".phl[145]" 0;
+	setAttr ".phl[146]" 0;
+	setAttr ".phl[147]" 0;
+	setAttr ".phl[148]" 0;
+	setAttr ".phl[149]" 0;
+	setAttr ".phl[150]" 0;
+	setAttr ".phl[151]" 0;
+	setAttr ".phl[152]" 0;
+	setAttr ".phl[153]" 0;
+	setAttr ".phl[154]" 0;
+	setAttr ".phl[155]" 0;
+	setAttr ".phl[156]" 0;
+	setAttr ".phl[157]" 0;
+	setAttr ".phl[158]" 0;
+	setAttr ".phl[159]" 0;
+	setAttr ".phl[160]" 0;
+	setAttr ".phl[161]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PlantRN1"
-		"PlantRN1" 0
-		"PlantRN1" 161
+		"PlantRN1" 22
+		0 "|Plant1:pasted__loftedSurfaceShape1" "|PlantRN1fosterParent1|Plant:transform15" 
+		"-s -r "
+		0 "|Plant1:pasted__loftedSurfaceShape1" "|PlantRN1fosterParent1|Plant:transform24" 
+		"-s -r "
+		2 "|group2|Plant1:group1|Plant1:pasted__loftedSurface1|Plant1:pasted__loftedSurfaceShape1" 
+		"intermediateObject" " 1"
+		2 "|group2|Plant1:group1|Plant1:pasted__loftedSurface1|Plant1:pasted__loftedSurfaceShape1" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		2 "|group2|Plant1:group1|Plant1:pasted__loftedSurface1|Plant1:pasted__loftedSurfaceShape1" 
+		"intermediateObject" " 1"
+		2 "|group2|Plant1:group1|Plant1:pasted__loftedSurface1|Plant1:pasted__loftedSurfaceShape1" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		
+		3 "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[71]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[72]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[73]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN1.placeHolderList[74]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN1.placeHolderList[75]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[76]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[77]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[78]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[79]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[80]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN1.placeHolderList[81]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN1.placeHolderList[82]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[83]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[84]" ""
+		"PlantRN1" 142
 		0 "|Plant1:group2" "|group2" "-s -r "
 		0 "|Plant1:pasted__pasted__loftedSurfaceShape1" "|PlantRN1fosterParent1|Plant:transform14" 
 		"-s -r "
 		0 "|Plant1:group1" "|group2" "-s -r "
-		0 "|Plant1:pasted__loftedSurfaceShape1" "|PlantRN1fosterParent1|Plant:transform15" 
-		"-s -r "
 		0 "|Plant1:group" "|group2" "-s -r "
-		0 "|Plant1:pasted__loftedSurfaceShape1" "|PlantRN1fosterParent1|Plant:transform24" 
-		"-s -r "
 		0 "|Plant1:pasted__loftedSurfaceShape2" "|PlantRN1fosterParent1|Plant:transform23" 
 		"-s -r "
 		0 "|Plant1:pasted__loftedSurfaceShape3" "|PlantRN1fosterParent1|Plant:transform22" 
@@ -6695,10 +6737,7 @@ createNode reference -n "PlantRN1";
 		" 1"
 		2 "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1" "instObjGroups.objectGroups[0].objectGrpCompList" 
 		" -type \"componentList\" 1 \"f[0:15]\""
-		2 "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1" 
-		"intermediateObject" " 1"
-		2 "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
+		2 "|group2|Plant1:group|Plant1:pasted__loftedSurface1" "translate" " -type \"double3\" -5.77928085580920303 0 0"
 		
 		2 "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2" 
 		"intermediateObject" " 1"
@@ -6740,9 +6779,9 @@ createNode reference -n "PlantRN1";
 		2 "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9" 
 		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
 		
-		2 "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1" 
+		2 "|group2|Plant1:group1|Plant1:pasted__loftedSurface1|Plant1:pasted__loftedSurfaceShape1" 
 		"intermediateObject" " 1"
-		2 "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1" 
+		2 "|group2|Plant1:group1|Plant1:pasted__loftedSurface1|Plant1:pasted__loftedSurfaceShape1" 
 		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
 		
 		2 "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1" 
@@ -6750,214 +6789,182 @@ createNode reference -n "PlantRN1";
 		2 "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1" 
 		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:15]\""
 		
-		3 "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups" 
+		3 "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups" 
+		3 "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[1]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[2]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[3]" ""
+		3 "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.outMesh" 
-		"PlantRN1.placeHolderList[4]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.worldMatrix" 
-		"PlantRN1.placeHolderList[5]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[6]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[7]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[8]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[9]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[10]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.outMesh" 
-		"PlantRN1.placeHolderList[11]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.worldMatrix" 
-		"PlantRN1.placeHolderList[12]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[13]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[14]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[15]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[16]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[17]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.outMesh" 
-		"PlantRN1.placeHolderList[18]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.worldMatrix" 
-		"PlantRN1.placeHolderList[19]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[20]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[21]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[22]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[23]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[24]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.outMesh" 
-		"PlantRN1.placeHolderList[25]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.worldMatrix" 
-		"PlantRN1.placeHolderList[26]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[27]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[28]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[29]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[30]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[31]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.outMesh" 
-		"PlantRN1.placeHolderList[32]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.worldMatrix" 
-		"PlantRN1.placeHolderList[33]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[34]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[35]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[36]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[37]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[38]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.outMesh" 
-		"PlantRN1.placeHolderList[39]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.worldMatrix" 
-		"PlantRN1.placeHolderList[40]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[41]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[42]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[43]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[44]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[45]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.outMesh" 
-		"PlantRN1.placeHolderList[46]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.worldMatrix" 
-		"PlantRN1.placeHolderList[47]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[48]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[49]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[50]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[51]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[52]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.outMesh" 
-		"PlantRN1.placeHolderList[53]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.worldMatrix" 
-		"PlantRN1.placeHolderList[54]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[55]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[56]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[57]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[58]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[59]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.outMesh" 
-		"PlantRN1.placeHolderList[60]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.worldMatrix" 
-		"PlantRN1.placeHolderList[61]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[62]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[63]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[64]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[65]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[66]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.outMesh" 
-		"PlantRN1.placeHolderList[67]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.worldMatrix" 
-		"PlantRN1.placeHolderList[68]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[69]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[70]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[71]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[72]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[73]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.outMesh" 
-		"PlantRN1.placeHolderList[74]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.worldMatrix" 
-		"PlantRN1.placeHolderList[75]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[76]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform24|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[77]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
-		"PlantRN1.placeHolderList[78]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
-		"PlantRN1.placeHolderList[79]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
-		"PlantRN1.placeHolderList[80]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.outMesh" 
-		"PlantRN1.placeHolderList[81]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.worldMatrix" 
-		"PlantRN1.placeHolderList[82]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
-		"PlantRN1.placeHolderList[83]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform15|Plant1:pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[84]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
 		"PlantRN1.placeHolderList[85]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups.objectGroups[0]" 
 		"PlantRN1.placeHolderList[86]" ""
-		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
 		"PlantRN1.placeHolderList[87]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.outMesh" 
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
 		"PlantRN1.placeHolderList[88]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.worldMatrix" 
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.worldMatrix" 
 		"PlantRN1.placeHolderList[89]" ""
-		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
 		"PlantRN1.placeHolderList[90]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform26|Plant1:revolvedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[91]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.outMesh" 
+		"PlantRN1.placeHolderList[92]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[93]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[94]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[95]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.worldMatrix" 
+		"PlantRN1.placeHolderList[96]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[97]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform25|Plant1:loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[98]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.outMesh" 
+		"PlantRN1.placeHolderList[99]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[100]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[101]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[102]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.worldMatrix" 
+		"PlantRN1.placeHolderList[103]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[104]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform16|Plant1:pasted__loftedSurfaceShape9.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[105]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.outMesh" 
+		"PlantRN1.placeHolderList[106]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[107]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[108]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[109]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.worldMatrix" 
+		"PlantRN1.placeHolderList[110]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[111]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform17|Plant1:pasted__loftedSurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[112]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.outMesh" 
+		"PlantRN1.placeHolderList[113]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[114]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[115]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[116]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.worldMatrix" 
+		"PlantRN1.placeHolderList[117]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[118]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform18|Plant1:pasted__loftedSurfaceShape7.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[119]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.outMesh" 
+		"PlantRN1.placeHolderList[120]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[121]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[122]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[123]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.worldMatrix" 
+		"PlantRN1.placeHolderList[124]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[125]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform19|Plant1:pasted__loftedSurfaceShape6.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[126]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.outMesh" 
+		"PlantRN1.placeHolderList[127]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[128]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[129]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[130]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.worldMatrix" 
+		"PlantRN1.placeHolderList[131]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[132]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform20|Plant1:pasted__loftedSurfaceShape5.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[133]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.outMesh" 
+		"PlantRN1.placeHolderList[134]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[135]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[136]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[137]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.worldMatrix" 
+		"PlantRN1.placeHolderList[138]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[139]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform21|Plant1:pasted__loftedSurfaceShape4.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[140]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.outMesh" 
+		"PlantRN1.placeHolderList[141]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[142]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[143]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[144]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.worldMatrix" 
+		"PlantRN1.placeHolderList[145]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[146]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform22|Plant1:pasted__loftedSurfaceShape3.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[147]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.outMesh" 
+		"PlantRN1.placeHolderList[148]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[149]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[150]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[151]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.worldMatrix" 
+		"PlantRN1.placeHolderList[152]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[153]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform23|Plant1:pasted__loftedSurfaceShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"PlantRN1.placeHolderList[154]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.outMesh" 
+		"PlantRN1.placeHolderList[155]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0]" 
+		"PlantRN1.placeHolderList[156]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		"PlantRN1.placeHolderList[157]" ""
+		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		"PlantRN1.placeHolderList[158]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.worldMatrix" 
+		"PlantRN1.placeHolderList[159]" ""
+		5 3 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0]" 
+		"PlantRN1.placeHolderList[160]" ""
 		5 4 "PlantRN1" "|PlantRN1fosterParent1|Plant:transform14|Plant1:pasted__pasted__loftedSurfaceShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"PlantRN1.placeHolderList[91]" "";
+		"PlantRN1.placeHolderList[161]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyUnite -n "polyUnite2";
@@ -7084,7 +7091,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.58974361 0.58974361 0.58974361 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 89 ".dsm";
+	setAttr -s 92 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 63 ".gn";
 select -ne :initialParticleSE;
@@ -7107,192 +7114,171 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "PlantRN.phl[110]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId1.id" "PlantRN.phl[111]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[112]";
-connectAttr "PlantRN.phl[113]" "polyUnite1.ip[0]";
-connectAttr "Plant:groupParts1.og" "PlantRN.phl[114]";
-connectAttr "PlantRN.phl[115]" "polyUnite1.im[0]";
-connectAttr "PlantRN.phl[116]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId2.id" "PlantRN.phl[117]";
-connectAttr "PlantRN.phl[118]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId25.id" "PlantRN.phl[119]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[120]";
-connectAttr "PlantRN.phl[121]" "polyUnite1.ip[12]";
-connectAttr "Plant:groupParts13.og" "PlantRN.phl[122]";
-connectAttr "PlantRN.phl[123]" "polyUnite1.im[12]";
-connectAttr "PlantRN.phl[124]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId26.id" "PlantRN.phl[125]";
-connectAttr "PlantRN.phl[126]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId21.id" "PlantRN.phl[127]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[128]";
-connectAttr "PlantRN.phl[129]" "polyUnite1.ip[10]";
-connectAttr "Plant:groupParts11.og" "PlantRN.phl[130]";
-connectAttr "PlantRN.phl[131]" "polyUnite1.im[10]";
-connectAttr "PlantRN.phl[132]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId22.id" "PlantRN.phl[133]";
-connectAttr "PlantRN.phl[134]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId19.id" "PlantRN.phl[135]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[136]";
-connectAttr "PlantRN.phl[137]" "polyUnite1.ip[9]";
-connectAttr "Plant:groupParts10.og" "PlantRN.phl[138]";
-connectAttr "PlantRN.phl[139]" "polyUnite1.im[9]";
-connectAttr "PlantRN.phl[140]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId20.id" "PlantRN.phl[141]";
-connectAttr "PlantRN.phl[142]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId17.id" "PlantRN.phl[143]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[144]";
-connectAttr "PlantRN.phl[145]" "polyUnite1.ip[8]";
-connectAttr "Plant:groupParts9.og" "PlantRN.phl[146]";
-connectAttr "PlantRN.phl[147]" "polyUnite1.im[8]";
-connectAttr "PlantRN.phl[148]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId18.id" "PlantRN.phl[149]";
-connectAttr "PlantRN.phl[150]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId15.id" "PlantRN.phl[151]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[152]";
-connectAttr "PlantRN.phl[153]" "polyUnite1.ip[7]";
-connectAttr "Plant:groupParts8.og" "PlantRN.phl[154]";
-connectAttr "PlantRN.phl[155]" "polyUnite1.im[7]";
-connectAttr "PlantRN.phl[156]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId16.id" "PlantRN.phl[157]";
-connectAttr "PlantRN.phl[158]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId13.id" "PlantRN.phl[159]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[160]";
-connectAttr "PlantRN.phl[161]" "polyUnite1.ip[6]";
-connectAttr "Plant:groupParts7.og" "PlantRN.phl[162]";
-connectAttr "PlantRN.phl[163]" "polyUnite1.im[6]";
-connectAttr "PlantRN.phl[164]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId14.id" "PlantRN.phl[165]";
-connectAttr "PlantRN.phl[166]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId11.id" "PlantRN.phl[167]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[168]";
-connectAttr "PlantRN.phl[169]" "polyUnite1.ip[5]";
-connectAttr "Plant:groupParts6.og" "PlantRN.phl[170]";
-connectAttr "PlantRN.phl[171]" "polyUnite1.im[5]";
-connectAttr "PlantRN.phl[172]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId12.id" "PlantRN.phl[173]";
-connectAttr "PlantRN.phl[174]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId9.id" "PlantRN.phl[175]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[176]";
-connectAttr "PlantRN.phl[177]" "polyUnite1.ip[4]";
-connectAttr "Plant:groupParts5.og" "PlantRN.phl[178]";
-connectAttr "PlantRN.phl[179]" "polyUnite1.im[4]";
-connectAttr "PlantRN.phl[180]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId10.id" "PlantRN.phl[181]";
-connectAttr "PlantRN.phl[182]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId7.id" "PlantRN.phl[183]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[184]";
-connectAttr "PlantRN.phl[185]" "polyUnite1.ip[3]";
-connectAttr "Plant:groupParts4.og" "PlantRN.phl[186]";
-connectAttr "PlantRN.phl[187]" "polyUnite1.im[3]";
-connectAttr "PlantRN.phl[188]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId8.id" "PlantRN.phl[189]";
-connectAttr "PlantRN.phl[190]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId29.id" "PlantRN.phl[191]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[192]";
-connectAttr "PlantRN.phl[193]" "polyUnite2.ip[1]";
-connectAttr "PlantRN.phl[194]" "polyUnite2.im[1]";
-connectAttr "PlantRN.phl[195]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId30.id" "PlantRN.phl[196]";
 connectAttr "PlantRN.phl[197]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId3.id" "PlantRN.phl[198]";
+connectAttr "Plant:groupId1.id" "PlantRN.phl[198]";
 connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[199]";
-connectAttr "PlantRN.phl[200]" "polyUnite1.ip[1]";
-connectAttr "Plant:groupParts2.og" "PlantRN.phl[201]";
-connectAttr "PlantRN.phl[202]" "polyUnite1.im[1]";
+connectAttr "PlantRN.phl[200]" "polyUnite1.ip[0]";
+connectAttr "Plant:groupParts1.og" "PlantRN.phl[201]";
+connectAttr "PlantRN.phl[202]" "polyUnite1.im[0]";
 connectAttr "PlantRN.phl[203]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId4.id" "PlantRN.phl[204]";
-connectAttr "PlantRN1.phl[1]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId31.id" "PlantRN1.phl[2]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[3]";
-connectAttr "PlantRN1.phl[4]" "polyUnite2.ip[2]";
-connectAttr "PlantRN1.phl[5]" "polyUnite2.im[2]";
-connectAttr "PlantRN1.phl[6]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId32.id" "PlantRN1.phl[7]";
-connectAttr "PlantRN1.phl[8]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId33.id" "PlantRN1.phl[9]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[10]";
-connectAttr "PlantRN1.phl[11]" "polyUnite2.ip[3]";
-connectAttr "PlantRN1.phl[12]" "polyUnite2.im[3]";
-connectAttr "PlantRN1.phl[13]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId34.id" "PlantRN1.phl[14]";
-connectAttr "PlantRN1.phl[15]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId51.id" "PlantRN1.phl[16]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[17]";
-connectAttr "PlantRN1.phl[18]" "polyUnite2.ip[12]";
-connectAttr "PlantRN1.phl[19]" "polyUnite2.im[12]";
-connectAttr "PlantRN1.phl[20]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId52.id" "PlantRN1.phl[21]";
-connectAttr "PlantRN1.phl[22]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId49.id" "PlantRN1.phl[23]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[24]";
-connectAttr "PlantRN1.phl[25]" "polyUnite2.ip[11]";
-connectAttr "PlantRN1.phl[26]" "polyUnite2.im[11]";
-connectAttr "PlantRN1.phl[27]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId50.id" "PlantRN1.phl[28]";
-connectAttr "PlantRN1.phl[29]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId47.id" "PlantRN1.phl[30]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[31]";
-connectAttr "PlantRN1.phl[32]" "polyUnite2.ip[10]";
-connectAttr "PlantRN1.phl[33]" "polyUnite2.im[10]";
-connectAttr "PlantRN1.phl[34]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId48.id" "PlantRN1.phl[35]";
-connectAttr "PlantRN1.phl[36]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId45.id" "PlantRN1.phl[37]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[38]";
-connectAttr "PlantRN1.phl[39]" "polyUnite2.ip[9]";
-connectAttr "PlantRN1.phl[40]" "polyUnite2.im[9]";
-connectAttr "PlantRN1.phl[41]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId46.id" "PlantRN1.phl[42]";
-connectAttr "PlantRN1.phl[43]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId43.id" "PlantRN1.phl[44]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[45]";
-connectAttr "PlantRN1.phl[46]" "polyUnite2.ip[8]";
-connectAttr "PlantRN1.phl[47]" "polyUnite2.im[8]";
-connectAttr "PlantRN1.phl[48]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId44.id" "PlantRN1.phl[49]";
-connectAttr "PlantRN1.phl[50]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId41.id" "PlantRN1.phl[51]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[52]";
-connectAttr "PlantRN1.phl[53]" "polyUnite2.ip[7]";
-connectAttr "PlantRN1.phl[54]" "polyUnite2.im[7]";
-connectAttr "PlantRN1.phl[55]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId42.id" "PlantRN1.phl[56]";
-connectAttr "PlantRN1.phl[57]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId39.id" "PlantRN1.phl[58]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[59]";
-connectAttr "PlantRN1.phl[60]" "polyUnite2.ip[6]";
-connectAttr "PlantRN1.phl[61]" "polyUnite2.im[6]";
-connectAttr "PlantRN1.phl[62]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId40.id" "PlantRN1.phl[63]";
-connectAttr "PlantRN1.phl[64]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId37.id" "PlantRN1.phl[65]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[66]";
-connectAttr "PlantRN1.phl[67]" "polyUnite2.ip[5]";
-connectAttr "PlantRN1.phl[68]" "polyUnite2.im[5]";
-connectAttr "PlantRN1.phl[69]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId38.id" "PlantRN1.phl[70]";
-connectAttr "PlantRN1.phl[71]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId35.id" "PlantRN1.phl[72]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[73]";
-connectAttr "PlantRN1.phl[74]" "polyUnite2.ip[4]";
-connectAttr "PlantRN1.phl[75]" "polyUnite2.im[4]";
-connectAttr "PlantRN1.phl[76]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId36.id" "PlantRN1.phl[77]";
-connectAttr "PlantRN1.phl[78]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId53.id" "PlantRN1.phl[79]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[80]";
-connectAttr "PlantRN1.phl[81]" "polyUnite2.ip[13]";
-connectAttr "PlantRN1.phl[82]" "polyUnite2.im[13]";
-connectAttr "PlantRN1.phl[83]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId54.id" "PlantRN1.phl[84]";
-connectAttr "PlantRN1.phl[85]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId55.id" "PlantRN1.phl[86]";
-connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[87]";
-connectAttr "PlantRN1.phl[88]" "polyUnite2.ip[14]";
-connectAttr "PlantRN1.phl[89]" "polyUnite2.im[14]";
+connectAttr "Plant:groupId2.id" "PlantRN.phl[204]";
+connectAttr "PlantRN.phl[205]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId25.id" "PlantRN.phl[206]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[207]";
+connectAttr "PlantRN.phl[208]" "polyUnite1.ip[12]";
+connectAttr "Plant:groupParts13.og" "PlantRN.phl[209]";
+connectAttr "PlantRN.phl[210]" "polyUnite1.im[12]";
+connectAttr "PlantRN.phl[211]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId26.id" "PlantRN.phl[212]";
+connectAttr "PlantRN.phl[213]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId21.id" "PlantRN.phl[214]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[215]";
+connectAttr "PlantRN.phl[216]" "polyUnite1.ip[10]";
+connectAttr "Plant:groupParts11.og" "PlantRN.phl[217]";
+connectAttr "PlantRN.phl[218]" "polyUnite1.im[10]";
+connectAttr "PlantRN.phl[219]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId22.id" "PlantRN.phl[220]";
+connectAttr "PlantRN.phl[221]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId19.id" "PlantRN.phl[222]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[223]";
+connectAttr "PlantRN.phl[224]" "polyUnite1.ip[9]";
+connectAttr "Plant:groupParts10.og" "PlantRN.phl[225]";
+connectAttr "PlantRN.phl[226]" "polyUnite1.im[9]";
+connectAttr "PlantRN.phl[227]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId20.id" "PlantRN.phl[228]";
+connectAttr "PlantRN.phl[229]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId17.id" "PlantRN.phl[230]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[231]";
+connectAttr "PlantRN.phl[232]" "polyUnite1.ip[8]";
+connectAttr "Plant:groupParts9.og" "PlantRN.phl[233]";
+connectAttr "PlantRN.phl[234]" "polyUnite1.im[8]";
+connectAttr "PlantRN.phl[235]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId18.id" "PlantRN.phl[236]";
+connectAttr "PlantRN.phl[237]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId15.id" "PlantRN.phl[238]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[239]";
+connectAttr "PlantRN.phl[240]" "polyUnite1.ip[7]";
+connectAttr "Plant:groupParts8.og" "PlantRN.phl[241]";
+connectAttr "PlantRN.phl[242]" "polyUnite1.im[7]";
+connectAttr "PlantRN.phl[243]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId16.id" "PlantRN.phl[244]";
+connectAttr "PlantRN.phl[245]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId13.id" "PlantRN.phl[246]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[247]";
+connectAttr "PlantRN.phl[248]" "polyUnite1.ip[6]";
+connectAttr "Plant:groupParts7.og" "PlantRN.phl[249]";
+connectAttr "PlantRN.phl[250]" "polyUnite1.im[6]";
+connectAttr "PlantRN.phl[251]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId14.id" "PlantRN.phl[252]";
+connectAttr "PlantRN.phl[253]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId11.id" "PlantRN.phl[254]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[255]";
+connectAttr "PlantRN.phl[256]" "polyUnite1.ip[5]";
+connectAttr "Plant:groupParts6.og" "PlantRN.phl[257]";
+connectAttr "PlantRN.phl[258]" "polyUnite1.im[5]";
+connectAttr "PlantRN.phl[259]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId12.id" "PlantRN.phl[260]";
+connectAttr "PlantRN.phl[261]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId9.id" "PlantRN.phl[262]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[263]";
+connectAttr "PlantRN.phl[264]" "polyUnite1.ip[4]";
+connectAttr "Plant:groupParts5.og" "PlantRN.phl[265]";
+connectAttr "PlantRN.phl[266]" "polyUnite1.im[4]";
+connectAttr "PlantRN.phl[267]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId10.id" "PlantRN.phl[268]";
+connectAttr "PlantRN.phl[269]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId7.id" "PlantRN.phl[270]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[271]";
+connectAttr "PlantRN.phl[272]" "polyUnite1.ip[3]";
+connectAttr "Plant:groupParts4.og" "PlantRN.phl[273]";
+connectAttr "PlantRN.phl[274]" "polyUnite1.im[3]";
+connectAttr "PlantRN.phl[275]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId8.id" "PlantRN.phl[276]";
+connectAttr "PlantRN.phl[277]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId3.id" "PlantRN.phl[278]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[279]";
+connectAttr "PlantRN.phl[280]" "polyUnite1.ip[1]";
+connectAttr "Plant:groupParts2.og" "PlantRN.phl[281]";
+connectAttr "PlantRN.phl[282]" "polyUnite1.im[1]";
+connectAttr "PlantRN.phl[283]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId4.id" "PlantRN.phl[284]";
+connectAttr "PlantRN1.phl[85]" "polyUnite2.ip[2]";
+connectAttr "PlantRN1.phl[86]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId31.id" "PlantRN1.phl[87]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[88]";
+connectAttr "PlantRN1.phl[89]" "polyUnite2.im[2]";
 connectAttr "PlantRN1.phl[90]" ":initialShadingGroup.dsm" -na;
-connectAttr "Plant:groupId56.id" "PlantRN1.phl[91]";
+connectAttr "Plant:groupId32.id" "PlantRN1.phl[91]";
+connectAttr "PlantRN1.phl[92]" "polyUnite2.ip[3]";
+connectAttr "PlantRN1.phl[93]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId33.id" "PlantRN1.phl[94]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[95]";
+connectAttr "PlantRN1.phl[96]" "polyUnite2.im[3]";
+connectAttr "PlantRN1.phl[97]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId34.id" "PlantRN1.phl[98]";
+connectAttr "PlantRN1.phl[99]" "polyUnite2.ip[12]";
+connectAttr "PlantRN1.phl[100]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId51.id" "PlantRN1.phl[101]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[102]";
+connectAttr "PlantRN1.phl[103]" "polyUnite2.im[12]";
+connectAttr "PlantRN1.phl[104]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId52.id" "PlantRN1.phl[105]";
+connectAttr "PlantRN1.phl[106]" "polyUnite2.ip[11]";
+connectAttr "PlantRN1.phl[107]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId49.id" "PlantRN1.phl[108]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[109]";
+connectAttr "PlantRN1.phl[110]" "polyUnite2.im[11]";
+connectAttr "PlantRN1.phl[111]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId50.id" "PlantRN1.phl[112]";
+connectAttr "PlantRN1.phl[113]" "polyUnite2.ip[10]";
+connectAttr "PlantRN1.phl[114]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId47.id" "PlantRN1.phl[115]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[116]";
+connectAttr "PlantRN1.phl[117]" "polyUnite2.im[10]";
+connectAttr "PlantRN1.phl[118]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId48.id" "PlantRN1.phl[119]";
+connectAttr "PlantRN1.phl[120]" "polyUnite2.ip[9]";
+connectAttr "PlantRN1.phl[121]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId45.id" "PlantRN1.phl[122]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[123]";
+connectAttr "PlantRN1.phl[124]" "polyUnite2.im[9]";
+connectAttr "PlantRN1.phl[125]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId46.id" "PlantRN1.phl[126]";
+connectAttr "PlantRN1.phl[127]" "polyUnite2.ip[8]";
+connectAttr "PlantRN1.phl[128]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId43.id" "PlantRN1.phl[129]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[130]";
+connectAttr "PlantRN1.phl[131]" "polyUnite2.im[8]";
+connectAttr "PlantRN1.phl[132]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId44.id" "PlantRN1.phl[133]";
+connectAttr "PlantRN1.phl[134]" "polyUnite2.ip[7]";
+connectAttr "PlantRN1.phl[135]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId41.id" "PlantRN1.phl[136]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[137]";
+connectAttr "PlantRN1.phl[138]" "polyUnite2.im[7]";
+connectAttr "PlantRN1.phl[139]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId42.id" "PlantRN1.phl[140]";
+connectAttr "PlantRN1.phl[141]" "polyUnite2.ip[6]";
+connectAttr "PlantRN1.phl[142]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId39.id" "PlantRN1.phl[143]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[144]";
+connectAttr "PlantRN1.phl[145]" "polyUnite2.im[6]";
+connectAttr "PlantRN1.phl[146]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId40.id" "PlantRN1.phl[147]";
+connectAttr "PlantRN1.phl[148]" "polyUnite2.ip[5]";
+connectAttr "PlantRN1.phl[149]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId37.id" "PlantRN1.phl[150]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[151]";
+connectAttr "PlantRN1.phl[152]" "polyUnite2.im[5]";
+connectAttr "PlantRN1.phl[153]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId38.id" "PlantRN1.phl[154]";
+connectAttr "PlantRN1.phl[155]" "polyUnite2.ip[14]";
+connectAttr "PlantRN1.phl[156]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId55.id" "PlantRN1.phl[157]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[158]";
+connectAttr "PlantRN1.phl[159]" "polyUnite2.im[14]";
+connectAttr "PlantRN1.phl[160]" ":initialShadingGroup.dsm" -na;
+connectAttr "Plant:groupId56.id" "PlantRN1.phl[161]";
 connectAttr "FloorLyr.di" "pCube1.do";
 connectAttr "groupId27.id" "ChairmeshShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "ChairmeshShape.iog.og[0].gco";
@@ -7361,6 +7347,9 @@ connectAttr "Plant:groupParts3.og" "PlantRN.phl[81]";
 connectAttr "Plant:groupId5.id" "PlantRN.phl[83]";
 connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[84]";
 connectAttr "Plant:groupId6.id" "PlantRN.phl[88]";
+connectAttr "Plant:groupId29.id" "PlantRN.phl[191]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN.phl[192]";
+connectAttr "Plant:groupId30.id" "PlantRN.phl[196]";
 connectAttr "PlantRNfosterParent1.msg" "PlantRN.fp";
 connectAttr "PlantRN.phl[105]" "polyConnectComponents1.ip";
 connectAttr "PlantRN.phl[106]" "polyConnectComponents2.ip";
@@ -7416,14 +7405,32 @@ connectAttr "polyConnectComponents13.out" "Plant:groupParts13.ig";
 connectAttr "Plant:groupId25.id" "Plant:groupParts13.gi";
 connectAttr "polyUnite1.out" "Plant:groupParts14.ig";
 connectAttr "Plant:groupId27.id" "Plant:groupParts14.gi";
+connectAttr "Plant:groupId35.id" "PlantRN1.phl[72]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[73]";
+connectAttr "Plant:groupId36.id" "PlantRN1.phl[77]";
+connectAttr "Plant:groupId53.id" "PlantRN1.phl[79]";
+connectAttr ":initialShadingGroup.mwc" "PlantRN1.phl[80]";
+connectAttr "Plant:groupId54.id" "PlantRN1.phl[84]";
 connectAttr "PlantRN1fosterParent1.msg" "PlantRN1.fp";
 connectAttr "|group2|group1|Plant:revolvedSurface1|Plant:transform28|Plant:revolvedSurface1Shape.o" "polyUnite2.ip[0]"
 		;
+connectAttr "PlantRN.phl[193]" "polyUnite2.ip[1]";
+connectAttr "PlantRN1.phl[74]" "polyUnite2.ip[4]";
+connectAttr "PlantRN1.phl[81]" "polyUnite2.ip[13]";
 connectAttr "|group2|group1|Plant:revolvedSurface1|Plant:transform28|Plant:revolvedSurface1Shape.wm" "polyUnite2.im[0]"
 		;
+connectAttr "PlantRN.phl[194]" "polyUnite2.im[1]";
+connectAttr "PlantRN1.phl[75]" "polyUnite2.im[4]";
+connectAttr "PlantRN1.phl[82]" "polyUnite2.im[13]";
 connectAttr "polyUnite2.out" "Plant:groupParts15.ig";
 connectAttr "Plant:groupId57.id" "Plant:groupParts15.gi";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "PlantRN.phl[190]" ":initialShadingGroup.dsm" -na;
+connectAttr "PlantRN.phl[195]" ":initialShadingGroup.dsm" -na;
+connectAttr "PlantRN1.phl[71]" ":initialShadingGroup.dsm" -na;
+connectAttr "PlantRN1.phl[76]" ":initialShadingGroup.dsm" -na;
+connectAttr "PlantRN1.phl[78]" ":initialShadingGroup.dsm" -na;
+connectAttr "PlantRN1.phl[83]" ":initialShadingGroup.dsm" -na;
 connectAttr "PlantRN.phl[10]" ":initialShadingGroup.dsm" -na;
 connectAttr "PlantRN.phl[15]" ":initialShadingGroup.dsm" -na;
 connectAttr "PlantRN.phl[82]" ":initialShadingGroup.dsm" -na;
